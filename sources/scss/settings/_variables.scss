@@ -1,0 +1,86 @@
+/**
+ * ------------------------------------------------------------------------
+ * #FONT
+ * ------------------------------------------------------------------------
+ */
+
+$font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !default;
+$font-family-monospace: "Lucida Console", monospace !default;
+
+$font-size-base: 10 !default;
+$line-height-base: 1.5 !default;
+$font-weight-base: 400 !default;
+
+
+/**
+ * ------------------------------------------------------------------------
+ * #COLOR
+ * ------------------------------------------------------------------------
+ */
+
+$theme-color: (
+  dark-900: #282c36,
+  dark-800: #333742,
+  dark-700: #414550,
+  dark-600: #8899aa,
+  dark-500: #959fb0,
+  dark-400: #798f9a,
+  dark-300: #9fb4bf,
+  dark-200: #bac9d1,
+  dark-100: #f2f5f9
+) !default;
+
+$blue: #04a9f4 !default;
+$green: #00c854 !default;
+$yellow: #ffd500 !default;
+$lightblue: #95e9e2 !default;
+$red: #ff5723 !default;
+
+$dark-900: #37474e !default;
+$dark-800: #607d8a !default;
+$dark-700: #8fa4ad !default;
+$dark-600: #cfd8dd !default;
+$dark-500: #eceff1 !default;
+
+$primary: $blue !default;
+$success: $green !default;
+$warning: $yellow !default;
+$info: $lightblue !default;
+$danger: $red !default;
+$secondary: $dark-700 !default;
+$black: #000 !default;
+$white: #fff !default;
+$grey: #6c757d !default;
+
+
+/**
+ * ------------------------------------------------------------------------
+ * #BORDER
+ * ------------------------------------------------------------------------
+ */
+
+$border-radius-base: .3em;
+
+/**
+ * ------------------------------------------------------------------------
+ * #NEEV
+ * ------------------------------------------------------------------------
+ */
+$neev-gutter: 30px;
+$neev-y-padding: $neev-gutter / 2;
+$neev-x-padding: $neev-gutter / 2;
+
+/**
+ * ------------------------------------------------------------------------
+ * #TRANSITION
+ * ------------------------------------------------------------------------
+ */
+$transition-time-base: .35s;
+
+
+/**
+ * ------------------------------------------------------------------------
+ * #NAVBAR
+ * ------------------------------------------------------------------------
+ */
+$navbar-stripe-height: 5rem !default;

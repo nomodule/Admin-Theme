@@ -1,0 +1,54 @@
+.alert {
+  display: block;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  border-radius: .3rem;
+  border: 1px solid transparent;
+  margin-bottom: 1rem;
+  
+  &.--primary {
+    color: darken($primary, 10%);
+    background: rgba($primary, .08);
+    border-color: $primary;
+  }
+
+  &.--secondary {
+    color: darken($secondary, 10%);
+    background: rgba($secondary, .08);
+    border-color: $secondary;
+  }
+
+  &.--success {
+    color: darken($success, 10%);
+    background: rgba($success, .08);
+    border-color: $success;
+  }
+
+  &.--info {
+    color: darken($info, 10%);
+    background: rgba($info, .08);
+    border-color: $info;
+  }
+
+  &.--warning {
+    color: darken($warning, 10%);
+    background: rgba($warning, .08);
+    border-color: $warning;
+  }
+
+  &.--danger {
+    color: darken($danger, 10%);
+    background: rgba($danger, .08);
+    border-color: $danger;
+  }
+
+  &.--dismissible {
+    padding-right: 4rem;
+  }
+
+  > * {
+    color: inherit;
+    font-size: 1em;
+  }
+}

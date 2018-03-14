@@ -1,0 +1,49 @@
+
+
+.btn {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1.6em;
+  padding: .6em 1.5em;
+  border: 1px solid transparent;
+
+  // removes undeline from anchors btn
+  text-decoration: none;
+
+  &--primary {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  &--secondary {
+    color: $white;
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+
+  &--success {
+    color: $white;
+    background-color: $success;
+    border-color: $success;
+  }
+
+  &--danger {
+    color: $white;
+    background-color: $danger;
+    border-color: $danger;
+  }
+
+  &--warning {
+    color: $black;
+    background-color: $warning;
+    border-color: $warning;
+  }
+
+  &--info {
+    color: $white;
+    background-color: $info;
+    border-color: $info;
+  }
+}
