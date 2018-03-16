@@ -58,6 +58,7 @@
     transform: translateX(-100%);
     overflow-y: scroll;
     transition: transform $transition-time-base ease;
+    max-width: 32.5rem;
 
     &.open {
       transform: translateX(0);
@@ -73,11 +74,12 @@
   }
 
   &__menu-item {
+    position: relative;
     text-align: left;
     color: map-get($theme-color, dark-100);
 
     &:hover, &:focus {
-      color: map-get($theme-color, dark-100);      
+      color: map-get($theme-color, dark-100);
     }
 
       &.--has-dropdown {
@@ -89,7 +91,7 @@
         &::before {
             content: "\f105";
             position: absolute;
-            top: 50%;
+            top: 1.9rem;
             right: 1rem;
             transform: translateY(-50%);
             display: block;
@@ -120,5 +122,18 @@
       color: inherit;
       margin-right: 1rem;
     }
+
+    &:hover, &:focus {
+      background: $primary;
+    }
+  }
+}
+
+.sub-menu {
+  display: block;
+  transition: height .3s ease;
+
+  &.show {
+
   }
 }

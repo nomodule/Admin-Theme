@@ -1,6 +1,6 @@
 "use-strict";
 
-(function(){
+;(function(){
 
   // #GLOBAL
 
@@ -10,19 +10,34 @@
     }
   }
 
+  function animateHeight() {
+    
+  }
+
   /**
    * ------------------------------------------------------------------------
    * #NAVBAR
    * ------------------------------------------------------------------------
    */
-  ;(function(){
+  (function(){
+
+    // Navbar toggle
   	var cNavbarLeftHeader = document.querySelector('.navbar-left__header'),
   			cNavbarLeftMenu = document.querySelector('.navbar-left__menu')
   			cNavbarLeftToggler = document.querySelector('.navbar-left__toggler');
 
-  	cNavbarLeftToggler.addEventListener('click', function(){
+  	  cNavbarLeftToggler.addEventListener('click', function(){
   		cNavbarLeftMenu.classList.toggle('open');
   	});
+
+    // Nvaber dropdown toggle
+    var cNavbarDropdowns = document.querySelectorAll('.navbar-left__menu-item.--has-dropdown');
+
+    function cNavbarDropdownToggler() {
+      this.querySelector('.sub-menu').classList.toggle('show');
+    }
+
+    attachClickEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler);
   })();
 
 
@@ -86,10 +101,6 @@
   (function(){
     var cAlerts = document.getElementsByClassName('alert'),
         cAlertCloseButtons = document.getElementsByClassName('alert-close');
-
-        console.log(cAlerts);
-        console.log(cAlertCloseButtons);
-
 
     function hideAlert() {
       // this.parentNode.classList.add('alert--hidden');
