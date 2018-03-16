@@ -1,54 +1,72 @@
 .alert {
+  position: relative;
   display: block;
   width: 100%;
-  font-size: 1.4rem;
   padding: 1rem 2rem;
   border-radius: .3rem;
   border: 1px solid transparent;
   margin-bottom: 1rem;
   
-  &.--primary {
+  &--primary {
     color: darken($primary, 10%);
     background: rgba($primary, .08);
     border-color: $primary;
   }
 
-  &.--secondary {
+  &--secondary {
     color: darken($secondary, 10%);
     background: rgba($secondary, .08);
     border-color: $secondary;
   }
 
-  &.--success {
+  &--success {
     color: darken($success, 10%);
     background: rgba($success, .08);
     border-color: $success;
   }
 
-  &.--info {
+  &--info {
     color: darken($info, 10%);
     background: rgba($info, .08);
     border-color: $info;
   }
 
-  &.--warning {
+  &--warning {
     color: darken($warning, 10%);
     background: rgba($warning, .08);
     border-color: $warning;
   }
 
-  &.--danger {
+  &--danger {
     color: darken($danger, 10%);
     background: rgba($danger, .08);
     border-color: $danger;
   }
 
-  &.--dismissible {
-    padding-right: 4rem;
+  &--dismissible {
+    padding-right: 5rem;
   }
 
-  > * {
-    color: inherit;
-    font-size: 1em;
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    padding: 1rem 1.8rem;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: .5;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      opacity: 1;
+    }
   }
+
+  &--hidden {
+    display: none;
+  }
+
 }

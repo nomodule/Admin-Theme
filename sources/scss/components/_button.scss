@@ -5,45 +5,69 @@
   display: inline-block;
   font-family: inherit;
   font-size: 1.6em;
-  padding: .6em 1.5em;
-  border: 1px solid transparent;
+  padding: .5rem 1.5em;
+  border: .4rem solid transparent;
 
-  // removes undeline from anchors btn
   text-decoration: none;
+  margin-bottom: $vertical-rhythm-base;
 
   &--primary {
     color: $white;
     background-color: $primary;
     border-color: $primary;
+
+    &:focus {
+      border-color: darken($primary, 10%); 
+    }
   }
 
   &--secondary {
     color: $white;
     background-color: $secondary;
     border-color: $secondary;
+
+    &:focus {
+      border-color: darken($secondary, 10%); 
+    }
   }
 
   &--success {
     color: $white;
     background-color: $success;
     border-color: $success;
+
+    &:focus {
+      border-color: darken($success, 10%); 
+    }
   }
 
   &--danger {
     color: $white;
     background-color: $danger;
     border-color: $danger;
+
+    &:focus {
+      border-color: darken($danger, 10%); 
+    }
   }
 
   &--warning {
     color: $black;
     background-color: $warning;
     border-color: $warning;
+
+    &:focus {
+      border-color: darken($warning, 10%); 
+    }
   }
 
   &--info {
     color: $white;
     background-color: $info;
     border-color: $info;
+
+    &:focus {
+      border-color: darken($info, 10%); 
+    }
   }
 }

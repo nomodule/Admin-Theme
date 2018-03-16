@@ -1,5 +1,5 @@
 {
-  "name": "admin theme",
+  "name": "Admin-Theme",
   "version": "1.0.0",
   "description": "admin theme",
   "main": "gulpfile.js",
@@ -8,10 +8,14 @@
   },
   "keywords": [
     "admin",
-    "theme",
+    "theme"
   ],
-  "author": "ajay",
+  "author": "Ajay",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hello-ajayrawat/Admin-Theme.git"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",

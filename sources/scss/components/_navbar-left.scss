@@ -68,6 +68,8 @@
       margin: 0;
       list-style: none;
     }
+
+    @include custom-scrollbar;
   }
 
   &__menu-item {
