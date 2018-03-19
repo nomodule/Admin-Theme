@@ -10,9 +10,7 @@
     }
   }
 
-  function animateHeight() {
-    
-  }
+
 
   /**
    * ------------------------------------------------------------------------
@@ -34,6 +32,7 @@
     var cNavbarDropdowns = document.querySelectorAll('.navbar-left__menu-item.--has-dropdown');
 
     function cNavbarDropdownToggler() {
+      this.classList.toggle('open');
       this.querySelector('.sub-menu').classList.toggle('show');
     }
 
