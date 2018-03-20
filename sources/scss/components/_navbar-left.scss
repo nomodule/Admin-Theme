@@ -99,23 +99,34 @@
         position: relative;
       }
 
+       &::before {
+        font-family: FontAwesome;
+        font-size: 1.5em;
+       }
+
       &::before {
-        content: "\f105";
+        content: "\f104";
         position: absolute;
         top: 1.9rem;
         right: 1rem;
         transform: translateY(-50%);
         display: block;
+        transition: transform $transition-time-base ease-in-out;
+      }
+    }
 
-        font-family: FontAwesome;
-        font-size: inherit;
+    &.--has-dropdown.open {
+      
+      & {
+        background: map-get($theme-color, dark-800);
       }
 
-      &.open {
+      .sub-menu {
+        display: block;
+      }
 
-        .sub-menu {
-          display: block;
-        }
+      &::before {
+        transform: translateY(-50%) rotate(-90deg);
       }
     }
   }

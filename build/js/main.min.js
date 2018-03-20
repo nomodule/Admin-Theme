@@ -10,6 +10,12 @@
     }
   }
 
+  function removeClassFromArrayItems(arr, cn) {
+    for(var i = 0; i < arr.length; i++) {
+      arr[i].classList.remove(cn);
+      console.log('removed');
+    }
+  }
 
 
   /**
@@ -30,13 +36,16 @@
 
     // Nvaber dropdown toggle
     var cNavbarDropdowns = document.querySelectorAll('.navbar-left__menu-item.--has-dropdown');
+    console.log(cNavbarDropdowns);
 
     function cNavbarDropdownToggler() {
+      // removeClassFromArrayItems(cNavbarDropdowns, 'open');
       this.classList.toggle('open');
       this.querySelector('.sub-menu').classList.toggle('show');
     }
 
     attachClickEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler);
+    // attachClickEventOnArrayItems(cNavbarDropdowns, removeClassFromArrayItems(cNavbarDropdowns, 'open'));
   })();
 
 
@@ -50,13 +59,6 @@
         cDropdownTogglers = document.getElementsByClassName('dropdown-toggler'),
         cDropdownMenus = document.getElementsByClassName('dropdown-menu'),
         cDropdownItem = document.getElementsByClassName('dropdown-item');
-
-
-    // function attachClickEventOnArrayItems(arr, fn) {
-    //   for (var i = 0; i < arr.length; i++) {
-    //     arr[i].addEventListener('click', fn);
-    //   }
-    // }
 
     function dropDownMenuToggler() {
       for (var i = 0; i < cDropdownMenus.length; i++) {
@@ -102,7 +104,6 @@
         cAlertCloseButtons = document.getElementsByClassName('alert-close');
 
     function hideAlert() {
-      // this.parentNode.classList.add('alert--hidden');
       this.parentNode.outerHTML = "";
     }
 

@@ -765,7 +765,12 @@ p {
 }
 
 .navbar-left__menu-item.--has-dropdown::before {
-  content: "\f105";
+  font-family: FontAwesome;
+  font-size: 1.5em;
+}
+
+.navbar-left__menu-item.--has-dropdown::before {
+  content: "\f104";
   position: absolute;
   top: 1.9rem;
   right: 1rem;
@@ -775,12 +780,28 @@ p {
        -o-transform: translateY(-50%);
           transform: translateY(-50%);
   display: block;
-  font-family: FontAwesome;
-  font-size: inherit;
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: -webkit-transform 0.35s ease-in-out;
+  -o-transition: -o-transform 0.35s ease-in-out;
+  -moz-transition: transform 0.35s ease-in-out, -moz-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out, -moz-transform 0.35s ease-in-out, -o-transform 0.35s ease-in-out;
+}
+
+.navbar-left__menu-item.--has-dropdown.open {
+  background: #333742;
 }
 
 .navbar-left__menu-item.--has-dropdown.open .sub-menu {
   display: block;
+}
+
+.navbar-left__menu-item.--has-dropdown.open::before {
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+     -moz-transform: translateY(-50%) rotate(-90deg);
+      -ms-transform: translateY(-50%) rotate(-90deg);
+       -o-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
 }
 
 .navbar-left__menu-item-divider {
