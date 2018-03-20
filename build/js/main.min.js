@@ -39,7 +39,6 @@
     console.log(cNavbarDropdowns);
 
     function cNavbarDropdownToggler() {
-      // removeClassFromArrayItems(cNavbarDropdowns, 'open');
       this.classList.toggle('open');
       this.querySelector('.sub-menu').classList.toggle('show');
     }

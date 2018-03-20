@@ -806,18 +806,17 @@ p {
 
 .navbar-left__menu-item-divider {
   padding: 7.5px 15px;
-  margin-top: 15px;
+  margin-top: 37.5px;
   text-transform: uppercase;
   font-weight: 700;
   color: #959fb0;
-  border-bottom: 1px solid #959fb0;
 }
 
 .navbar-left__menu-link {
   display: block;
   padding: 7.5px 15px;
   text-decoration: none;
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: inherit;
 }
 

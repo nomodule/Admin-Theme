@@ -133,18 +133,18 @@
 
   &__menu-item-divider {
     padding: ($neev-y-padding / 2) $neev-x-padding;
-    margin-top: $neev-x-padding;
+    margin-top: $neev-x-padding * 2.5;
     text-transform: uppercase;
     font-weight: 700;
     color:  map-get($theme-color, dark-500);
-    border-bottom:  1px solid map-get($theme-color, dark-500);
+    // border-bottom:  1px solid map-get($theme-color, dark-500);
   }
 
   &__menu-link {
     display: block;
     padding: ($neev-y-padding / 2) $neev-x-padding;
     text-decoration: none;
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: inherit;
 
     .fa {
