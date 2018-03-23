@@ -30,9 +30,27 @@
   			cNavbarLeftMenu = document.querySelector('.navbar-left__menu')
   			cNavbarLeftToggler = document.querySelector('.navbar-left__toggler');
 
-  	  cNavbarLeftToggler.addEventListener('click', function(){
-  		cNavbarLeftMenu.classList.toggle('open');
-  	});
+    cNavbarLeftToggler.addEventListener('click', function(){
+      cNavbarLeftMenu.classList.toggle('open');
+      cNavbarLeftMenu.classList.toggle('stick');
+    });
+
+    cNavbarLeftMenu.addEventListener('mouseover', function(){
+      if(this.classList.contains('stick')) {
+        return false;
+      } else {
+        this.classList.add('open');
+      }
+    });
+
+    cNavbarLeftMenu.addEventListener('mouseout', function(){
+      if(this.classList.contains('stick')) {
+        return false;
+      } else {
+        this.classList.remove('open');
+      }
+    });
+
 
     // Nvaber dropdown toggle
     var cNavbarDropdowns = document.querySelectorAll('.navbar-left__menu-item.--has-dropdown');
