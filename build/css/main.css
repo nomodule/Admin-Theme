@@ -705,13 +705,9 @@ p {
   top: 5rem;
   padding-bottom: 10rem;
   width: 100%;
+  max-width: 6.5rem;
   height: 100%;
   background: #414550;
-  -webkit-transform: translateX(-100%);
-     -moz-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-       -o-transform: translateX(-100%);
-          transform: translateX(-100%);
   overflow-y: scroll;
   -webkit-transition: -webkit-transform 0.35s ease;
   transition: -webkit-transform 0.35s ease;
@@ -719,15 +715,10 @@ p {
   -moz-transition: transform 0.35s ease, -moz-transform 0.35s ease;
   transition: transform 0.35s ease;
   transition: transform 0.35s ease, -webkit-transform 0.35s ease, -moz-transform 0.35s ease, -o-transform 0.35s ease;
-  max-width: 32.5rem;
 }
 
-.navbar-left__menu.open {
-  -webkit-transform: translateX(0);
-     -moz-transform: translateX(0);
-      -ms-transform: translateX(0);
-       -o-transform: translateX(0);
-          transform: translateX(0);
+.navbar-left__menu-link-text {
+  display: none;
 }
 
 .navbar-left__menu ul {
@@ -748,6 +739,14 @@ p {
 .navbar-left__menu::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-left__menu.open {
+  max-width: 32.5rem;
+}
+
+.navbar-left__menu.open .navbar-left__menu-link-text {
+  display: block;
 }
 
 .navbar-left__menu-item {
@@ -805,15 +804,29 @@ p {
 }
 
 .navbar-left__menu-item-divider {
+  display: none;
   padding: 7.5px 15px;
-  margin-top: 37.5px;
+  margin-top: 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: #959fb0;
 }
 
-.navbar-left__menu-link {
+.navbar-left__menu.open .navbar-left__menu-item-divider {
   display: block;
+}
+
+.navbar-left__menu-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 7.5px 15px;
   text-decoration: none;
   font-size: 1.4em;

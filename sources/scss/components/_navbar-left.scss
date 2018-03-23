@@ -64,15 +64,15 @@
     top: $navbar-stripe-height;
     padding-bottom: $navbar-stripe-height * 2;
     width: 100%;
+    max-width: 6.5rem;
     height: 100%;
     background: map-get($theme-color, dark-700);
-    transform: translateX(-100%);
+    // transform: translateX(-100%);
     overflow-y: scroll;
     transition: transform $transition-time-base ease;
-    max-width: 32.5rem;
 
-    &.open {
-      transform: translateX(0);
+    &-link-text {
+      display: none;
     }
 
     ul {
@@ -82,6 +82,16 @@
     }
 
     @include custom-scrollbar;
+  }
+
+  &__menu.open {
+
+      // transform: translateX(0);
+      max-width: 32.5rem;
+      
+    .navbar-left__menu-link-text {
+      display: block;
+    }
   }
 
   &__menu-item {
@@ -132,16 +142,22 @@
   }
 
   &__menu-item-divider {
+    display: none;
     padding: ($neev-y-padding / 2) $neev-x-padding;
-    margin-top: $neev-x-padding * 2.5;
+    margin-top: $neev-x-padding * 1;
     text-transform: uppercase;
     font-weight: 700;
     color:  map-get($theme-color, dark-500);
     // border-bottom:  1px solid map-get($theme-color, dark-500);
   }
 
-  &__menu-link {
+  &__menu.open &__menu-item-divider {
     display: block;
+  }
+
+  &__menu-link {
+    display: flex;
+    align-items: center;
     padding: ($neev-y-padding / 2) $neev-x-padding;
     text-decoration: none;
     font-size: 1.4em;
