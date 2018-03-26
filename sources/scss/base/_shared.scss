@@ -40,3 +40,10 @@
  body {
   padding-top: $navbar-stripe-height;
  }
+
+.page-wrapper {
+  padding-left: 6.5 + 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  backgroud: red;
+}

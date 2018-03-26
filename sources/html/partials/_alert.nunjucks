@@ -1,0 +1,87 @@
+  <h4>Alert with paragrph and some dummy text.</h4>
+
+  <div class="alert alert--primary">
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--success">
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--info">
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--warning">
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--danger">
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <h4>Alert with heading.</h4>
+  <div class="alert alert--primary">
+    <h5>Alert Primary</h5>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--success">
+    <h5>Alert Success</h5>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--info">
+    <h5>Alert Info</h5>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--warning">
+    <h5>Alert Warning</h5>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--danger">
+    <h5>Alert Danger</h5>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+  
+  <h4>Alert with close button.</h4>
+  <div class="alert alert--danger alert--dismissible">
+    <button class="alert-close">&times;</button>
+    <h5>Alert Danger</h5>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--secondary alert--dismissible">
+    <button class="alert-close">&times;</button>
+    <h5>Alert secondary</h5>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--info alert--dismissible">
+    <button class="alert-close">&times;</button>
+    <h5>Alert info</h5>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <h4>Alert with heading.</h4>
+  <div class="alert alert--primary alert--dismissible">
+    <button class="alert-close">&times;</button>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--success alert--dismissible">
+    <button class="alert-close">&times;</button>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--info alert--dismissible">
+    <button class="alert-close">&times;</button>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>
+
+  <div class="alert alert--warning alert--dismissible">
+    <button class="alert-close">&times;</button>
+    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+  </div>

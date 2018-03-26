@@ -1,0 +1,163 @@
+// Small (sm)
+@media (min-width: 567px) {};
+// Medium (md)
+@media (min-width: 768px) {};
+// Large (lg)
+@media (min-width: 992px) {};
+// Extra large (xl)
+@media (min-width: 1200px) {};
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-up($sm) {
+     max-width: map-get($container-max-widths, sm);
+  }
+
+  @include media-up($md) {
+     max-width: map-get($container-max-widths, md);
+  }
+
+  @include media-up($lg) {
+     max-width: map-get($container-max-widths, lg);
+  }
+
+  @include media-up($xl) {
+     max-width: map-get($container-max-widths, xl);
+  }
+}
+
+.row {
+  width: 100%;
+
+  @include clearix;
+}
+
+[class^="column"] {
+  float: left;
+  padding-right: ($grid-gutter / 2);
+  padding-left: ($grid-gutter / 2);
+  background: lightblue;
+  
+  // This width will be overide by media query
+  width: 100%;
+}
+
+/* SMALL COLUMNS */
+@include media-up($sm) {
+  @for $i from 1 through 12 {
+    @if ($i == 5) {
+      .column-sm-up-#{$i}th {
+        width: 20%;
+      }
+    }
+    .column-sm-up-#{$i} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@include media-down($sm) {
+  @for $i from 1 through 12 {
+    @if ($i == 5) {
+      .column-sm-down-#{$i}th {
+        width: 20%;
+      }
+    }
+    .column-sm-down-#{$i} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+/* \.SMALL COLUMNS */
+
+/* MEDIUM COLUMNS */
+@include media-up($md) {
+  @for $i from 1 through 12 {
+    @if ($i == 5) {
+      .column-md-up-#{$i}th {
+        width: 20%;
+      }
+    }
+    .column-md-up-#{$i} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@include media-down($md) {
+  @for $i from 1 through 12 {
+    @if ($i == 5) {
+      .column-md-down-#{$i}th {
+        width: 20%;
+      }
+    }
+    .column-md-down-#{$i} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+/* \.MEDIUM COLUMNS */
+
+/* LARGE COLUMNS */
+@include media-up($lg) {
+  @for $i from 1 through 12 {
+    @if ($i == 5) {
+      .column-lg-up-#{$i}th {
+        width: 20%;
+      }
+    }
+    .column-lg-up-#{$i} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@include media-down($lg) {
+  @for $i from 1 through 12 {
+    @if ($i == 5) {
+      .column-lg-down-#{$i}th {
+        width: 20%;
+      }
+    }
+    .column-lg-down-#{$i} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+/* \.LARGE COLUMNS */
+
+/* EXTRA LARGE COLUMNS */
+@include media-up($xl) {
+  @for $i from 1 through 12 {
+    @if ($i == 5) {
+      .column-xl-up-#{$i}th {
+        width: 20%;
+      }
+    }
+    .column-xl-up-#{$i} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@include media-down($xl) {
+  @for $i from 1 through 12 {
+    @if ($i == 5) {
+      .column-xl-down-#{$i}th {
+        width: 20%;
+      }
+    }
+    .column-xl-down-#{$i} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+/* \.EXTRA LARGE COLUMNS */
+
+
+
+
+/************ TEST *************/

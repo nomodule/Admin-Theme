@@ -8,11 +8,21 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
     sourcemaps = require('gulp-sourcemaps'),
+    nunjucksRender = require('gulp-nunjucks-render'),
     browserSync = require('browser-sync');
 
 gulp.task('html', function(){
   gulp.src('build/*.html')
     .pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('nunjucksRender', function(){
+  gulp.src('sources/html/**/*.+(html|nunjucks)')
+  .pipe(nunjucksRender({
+      path: ['sources/html/']
+  }))
+  .pipe(gulp.dest('build/'))
+  .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('css', function(){
@@ -41,7 +51,8 @@ gulp.task('js', function() {
 });
 
 gulp.task('watch', function(){
-  gulp.watch('build/*.html', ['html']);
+  gulp.watch('build/*.html', ['html', 'nunjucksRender']);
+  gulp.watch('sources/**/*.nunjucks', ['nunjucksRender']);
   gulp.watch('sources/scss/**/*.scss', ['css']);
   gulp.watch('sources/js/**/*.js', ['js']);
 });

@@ -1,0 +1,16 @@
+// Sizes for media queries
+$xs: 420px !default;
+$sm: 576px !default;
+$md: 768px !default;
+$lg: 992px !default;
+$xl: 1200px !default;
+
+// GRID
+$grid-gutter: 30px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;

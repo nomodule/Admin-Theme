@@ -1,0 +1,5 @@
+{% extends "partials/layout.nunjucks" %}
+
+{% block contnet %}
+  {% include "partials/navigation.nunjucks" %}
+{% endblock %}

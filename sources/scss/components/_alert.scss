@@ -6,40 +6,42 @@
   border-radius: .3rem;
   border: 1px solid transparent;
   margin-bottom: 1rem;
+
+  $alert-bg-opacity: 45%;
   
   &--primary {
     color: darken($primary, 10%);
-    background: rgba($primary, .08);
+    background: lighten($primary, $alert-bg-opacity);
     border-color: $primary;
   }
 
   &--secondary {
     color: darken($secondary, 10%);
-    background: rgba($secondary, .08);
+    background: lighten($secondary, $alert-bg-opacity);
     border-color: $secondary;
   }
 
   &--success {
     color: darken($success, 10%);
-    background: rgba($success, .08);
+    background: lighten($success, $alert-bg-opacity);
     border-color: $success;
   }
 
   &--info {
     color: darken($info, 10%);
-    background: rgba($info, .08);
+    background: lighten($info, $alert-bg-opacity);
     border-color: $info;
   }
 
   &--warning {
     color: darken($warning, 10%);
-    background: rgba($warning, .08);
+    background: lighten($warning, $alert-bg-opacity);
     border-color: $warning;
   }
 
   &--danger {
     color: darken($danger, 10%);
-    background: rgba($danger, .08);
+    background: lighten($danger, $alert-bg-opacity);
     border-color: $danger;
   }
 

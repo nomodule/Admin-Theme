@@ -1,0 +1,67 @@
+@mixin clearix() {
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Responsive breakpoints
+@mixin media-up($size) {
+  @if ($size == $sm) {
+    @media (min-width: $sm) {
+      @content;
+    };
+  }
+
+  @if ($size == $md) {
+    @media (min-width: $md) {
+      @content;
+    };
+  }
+
+  @if ($size == $lg) {
+    @media (min-width: $lg) {
+      @content;
+    };
+  }
+
+  @if ($size == $xl) {
+    @media (min-width: $xl) {
+      @content;
+    };
+  }
+}
+
+@mixin media-down($size) {
+  @if ($size == $sm) {
+    @media (max-width: $sm) {
+      @content;
+    };
+  }
+
+  @if ($size == $md) {
+    @media (max-width: $md) {
+      @content;
+    };
+  }
+
+  @if ($size == $lg) {
+    @media (max-width: $lg) {
+      @content;
+    };
+  }
+
+  @if ($size == $xl) {
+    @media (max-width: $xl) {
+      @content;
+    };
+  }
+}
+
+
+// Columns
+

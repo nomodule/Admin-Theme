@@ -1,0 +1,21 @@
+.card {
+  
+  $card-border-radius: 1rem;
+
+  & {
+    border-radius: $card-border-radius;
+    overflow: hidden;
+  }
+
+  &-body {
+    padding: 1rem;
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+    border: 1px solid red;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
