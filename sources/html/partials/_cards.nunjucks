@@ -1,10 +1,52 @@
-<div class="column">
-  <div class="card">
-    <img src="https://source.unsplash.com/300x300/?flower" alt="placeholder image">
-    <div class="card-body">
-      <h5 class="card-title">Card title goes here</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolore, perferendis id quis quia modi voluptatum, numquam! Atque.</p>
-      <a href="#" class="btn btn--primary">Go somewhere</a>
+<div class="row">
+  <div class="column-sm-up-6 column-md-up-4 column-lg-up-3 mb-base">
+    <div class="card">
+      <img src="https://source.unsplash.com/300x300/?flower" alt="placeholder image">
+      <div class="card-body">
+        <h5 class="card-title">Card title goes here</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolore, perferendis id quis quia modi voluptatum, numquam! Atque.</p>
+        <a href="#" class="btn btn--primary mt-base">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column-sm-up-6 column-md-up-4 column-lg-up-3 mb-base">
+    <div class="card">
+      <img src="https://source.unsplash.com/300x300/?flower" alt="placeholder image">
+      <div class="card-body">
+        <h5 class="card-title">Card title goes here</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolore, perferendis id quis quia modi voluptatum, numquam! Atque.</p>
+        <a href="#" class="btn btn--primary mt-base">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column-sm-up-6 column-md-up-4 column-lg-up-3 mb-base">
+    <div class="card">
+      <img src="https://source.unsplash.com/300x300/?flower" alt="placeholder image">
+      <div class="card-body">
+        <h5 class="card-title">Card title goes here</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolore, perferendis id quis quia modi voluptatum, numquam! Atque.</p>
+        <a href="#" class="btn btn--primary mt-base">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column-sm-up-6 column-md-up-4 column-lg-up-3 mb-base">
+    <div class="card">
+      <img src="https://source.unsplash.com/300x300/?flower" alt="placeholder image">
+      <div class="card-body">
+        <h5 class="card-title">Card title goes here</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolore, perferendis id quis quia modi voluptatum, numquam! Atque.</p>
+        <a href="#" class="btn btn--primary mt-base">Go somewhere</a>
+        <div class="dropdown">
+          <button class="dropdown-toggler btn btn--warning">Dropdown</button>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Action</a>
+            <a href="#" class="dropdown-item">Another action</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

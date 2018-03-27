@@ -1,4 +1,10 @@
-  <h4>Alert with paragrph and some dummy text.</h4>
+<h1 class="text-right">Alerts</h1>
+<h4>Alert with paragrph and some dummy text.</h4>
+
+<pre><code class="language-markup">&lt;div class="alert alert--primary">
+  &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident &lt;strong>inventore&lt;/strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
+&lt;/div>
+</code></pre>
 
   <div class="alert alert--primary">
     <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
@@ -47,6 +53,12 @@
   </div>
   
   <h4>Alert with close button.</h4>
+<pre><code class="language-markup">&lt;div class="alert alert--danger alert--dismissible">
+  &lt;button class="alert-close">&times;&lt;/button>
+  &lt;h5>Alert Danger&lt;/h5>
+  &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
+&lt;/div>
+</code></pre>
   <div class="alert alert--danger alert--dismissible">
     <button class="alert-close">&times;</button>
     <h5>Alert Danger</h5>
@@ -66,6 +78,11 @@
   </div>
 
   <h4>Alert with heading.</h4>
+<pre><code class="language-markup">&lt;div class="alert alert--primary alert--dismissible">
+  &lt;button class="alert-close">&times;&lt;/button>
+  &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident &lt;strong>inventore&lt;/strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
+&lt;/div>
+</code></pre>
   <div class="alert alert--primary alert--dismissible">
     <button class="alert-close">&times;</button>
     <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>

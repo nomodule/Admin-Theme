@@ -35,6 +35,8 @@
       cNavbarLeftMenu.classList.toggle('stick');
     });
 
+
+    // on hover navigation collapse toggle
     cNavbarLeftMenu.addEventListener('mouseover', function(){
       if(this.classList.contains('stick')) {
         return false;
@@ -54,9 +56,12 @@
 
     // Nvaber dropdown toggle
     var cNavbarDropdowns = document.querySelectorAll('.navbar-left__menu-item.--has-dropdown');
-    console.log(cNavbarDropdowns);
 
-    function cNavbarDropdownToggler() {
+    function cNavbarDropdownToggler(e) {
+      for(var i = 0; i < cNavbarDropdowns.length; i++) {
+        cNavbarDropdowns[i].classList.remove('open')
+      }
+
       this.classList.toggle('open');
       this.querySelector('.sub-menu').classList.toggle('show');
     }

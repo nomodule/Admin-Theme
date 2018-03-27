@@ -1,0 +1,17 @@
+<h1>Buttons</h1>
+<button class="btn">Button Default</button>
+<button class="btn btn--primary">Button Primary</button>
+<button class="btn btn--secondary">Button Secondary</button>
+<button class="btn btn--info">Button Info</button>
+<button class="btn btn--success">Button Success</button>
+<button class="btn btn--warning">Button Warning</button>
+<button class="btn btn--danger">Button Danger</button>
+
+<pre><code class="language-markup">&lt;button class="btn">Button Default&lt;/button>
+&lt;button class="btn btn--primary">Button Primary&lt;/button>
+&lt;button class="btn btn--secondary">Button Secondary&lt;/button>
+&lt;button class="btn btn--info">Button Info&lt;/button>
+&lt;button class="btn btn--success">Button Success&lt;/button>
+&lt;button class="btn btn--warning">Button Warning&lt;/button>
+&lt;button class="btn btn--danger">Button Danger&lt;/button>
+</code></pre>

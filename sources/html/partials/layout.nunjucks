@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Admin Template</title>
 
@@ -15,13 +16,14 @@
       display: none !important;
     }
   </style>
+
 </head>
 <body>
   
   <div class="page-wrapper">
     {% block contnet %} {% endblock %}
   </div>
-
 <script type="text/javascript" src="js/main.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 </body>
 </html>

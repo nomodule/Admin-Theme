@@ -1,0 +1,23 @@
+pre[class*=language-] {
+  display: block;
+  background: #ddd !important;
+  padding: 2rem;
+
+  margin-bottom: $vertical-rhythm-base * 3;
+  
+  border: 1px solid $info;
+  border-left-width: 5px;
+}
+
+code[class] {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  font-size: 1.6rem;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    word-wrap: normal;
+}

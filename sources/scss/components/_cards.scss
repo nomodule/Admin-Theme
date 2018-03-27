@@ -1,17 +1,17 @@
 .card {
   
-  $card-border-radius: 1rem;
+  $card-border-radius: .3rem;
 
   & {
     border-radius: $card-border-radius;
-    overflow: hidden;
+    background: $white;
   }
 
   &-body {
     padding: 1rem;
     border-bottom-left-radius: $card-border-radius;
     border-bottom-right-radius: $card-border-radius;
-    border: 1px solid red;
+    border: 1px solid $grey;
   }
 
   img {

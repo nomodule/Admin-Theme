@@ -27,6 +27,12 @@
             </li>
             <li class="navbar-left__menu-item ">
               <a href="# " class="navbar-left__menu-link ">
+                <i class="fa fa-caret-down "></i>
+                <span class="navbar-left__menu-link-text ">Dropdowns</span>
+              </a>
+            </li>
+            <li class="navbar-left__menu-item ">
+              <a href="# " class="navbar-left__menu-link ">
                 <i class="fa fa-id-badge "></i>
                 <span class="navbar-left__menu-link-text ">Badges</span>
               </a>

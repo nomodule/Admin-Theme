@@ -1,33 +1,38 @@
+// Page specific variables
 
+$bg-dark-base: 10%;
 
 .btn {
-  position: relative;
-  display: inline-block;
-  font-family: inherit;
-  font-size: 1.6em;
-  padding: .5rem 1.5em;
-  border: .4rem solid transparent;
+  
+  & {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1.6em;
+    padding: .8rem 1.5em;
+    border-radius: .5rem;
 
-  text-decoration: none;
-  margin-bottom: $vertical-rhythm-base;
+    text-decoration: none;
+    margin-bottom: $vertical-rhythm-base;
+    border: none;
+
+  }
 
   &--primary {
     color: $white;
     background-color: $primary;
-    border-color: $primary;
 
-    &:focus {
-      border-color: darken($primary, 10%); 
+    &:hover, &:focus {
+      background-color: darken($primary, $bg-dark-base);      
     }
   }
 
   &--secondary {
     color: $white;
     background-color: $secondary;
-    border-color: $secondary;
 
-    &:focus {
-      border-color: darken($secondary, 10%); 
+    &:hover, &:focus {
+      background-color: darken($secondary, $bg-dark-base);      
     }
   }
 
@@ -36,8 +41,8 @@
     background-color: $success;
     border-color: $success;
 
-    &:focus {
-      border-color: darken($success, 10%); 
+    &:hover, &:focus {
+      background-color: darken($success, $bg-dark-base);      
     }
   }
 
@@ -46,8 +51,8 @@
     background-color: $danger;
     border-color: $danger;
 
-    &:focus {
-      border-color: darken($danger, 10%); 
+    &:hover, &:focus {
+      background-color: darken($danger, $bg-dark-base);      
     }
   }
 
@@ -56,8 +61,8 @@
     background-color: $warning;
     border-color: $warning;
 
-    &:focus {
-      border-color: darken($warning, 10%); 
+    &:hover, &:focus {
+      background-color: darken($warning, $bg-dark-base);      
     }
   }
 
@@ -66,8 +71,8 @@
     background-color: $info;
     border-color: $info;
 
-    &:focus {
-      border-color: darken($info, 10%); 
+    &:hover, &:focus {
+      background-color: darken($info, $bg-dark-base);      
     }
   }
 }

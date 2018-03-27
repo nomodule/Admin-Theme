@@ -20,8 +20,8 @@
     align-items: center;
     width: 100%;
     height: $navbar-stripe-height; // 50px / 10
-    border-bottom: 1px solid  map-get($theme-color, dark-500);
-    background: map-get($theme-color, dark-700);
+    border-bottom: 1px solid  map-get($theme-color, dark-900);
+    background: #414550;
     padding: $neev-y-padding $neev-x-padding;
   }
 
@@ -66,7 +66,7 @@
     width: 100%;
     max-width: 6.5rem;
     height: 100%;
-    background: map-get($theme-color, dark-700);
+    background: #414550;
     // transform: translateX(-100%);
     overflow-y: scroll;
 
@@ -127,7 +127,7 @@
     &.--has-dropdown.open {
       
       & {
-        background: map-get($theme-color, dark-800);
+        background: darken(#414550, 10%);
       }
 
       &::before {
