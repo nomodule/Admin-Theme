@@ -35,7 +35,20 @@
       cNavbarLeftMenu.classList.toggle('stick');
     });
 
+    // Nvaber dropdown toggle
+    var cNavbarDropdowns = document.querySelectorAll('.navbar-left__menu-item.--has-dropdown');
 
+    function cNavbarDropdownToggler(e) {
+      for(var i = 0; i < cNavbarDropdowns.length; i++) {
+        cNavbarDropdowns[i].classList.remove('open')
+      }
+
+      this.classList.toggle('open');
+      this.querySelector('.sub-menu').classList.toggle('show');
+    }
+
+    attachClickEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler);
+    
     // on hover navigation collapse toggle
     cNavbarLeftMenu.addEventListener('mouseover', function(){
       if(this.classList.contains('stick')) {
@@ -53,21 +66,6 @@
       }
     });
 
-
-    // Nvaber dropdown toggle
-    var cNavbarDropdowns = document.querySelectorAll('.navbar-left__menu-item.--has-dropdown');
-
-    function cNavbarDropdownToggler(e) {
-      for(var i = 0; i < cNavbarDropdowns.length; i++) {
-        cNavbarDropdowns[i].classList.remove('open')
-      }
-
-      this.classList.toggle('open');
-      this.querySelector('.sub-menu').classList.toggle('show');
-    }
-
-    attachClickEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler);
-    // attachClickEventOnArrayItems(cNavbarDropdowns, removeClassFromArrayItems(cNavbarDropdowns, 'open'));
   })();
 
 

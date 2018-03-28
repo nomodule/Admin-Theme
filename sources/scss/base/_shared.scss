@@ -42,8 +42,15 @@
  }
 
 .page-wrapper {
-  padding-left: 6.5 + 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  backgroud: red;
+  padding: 3rem;
+  padding-left: 3rem + 5.5rem;
+  border: 1px solid red;
+
+  @include media-down($lg) {
+    padding: 3rem;
+  }
+}
+
+[class*="display"] {
+  font-weight: 500;
 }
