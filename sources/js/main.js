@@ -80,10 +80,18 @@
         cDropdownMenus = document.getElementsByClassName('dropdown-menu'),
         cDropdownItem = document.getElementsByClassName('dropdown-item');
 
-    function dropDownMenuToggler() {
+    function dropDownMenuToggler(e) {
+
       for (var i = 0; i < cDropdownMenus.length; i++) {
         if (this === cDropdownTogglers[i]) {
           cDropdownMenus[i].classList.toggle('show');
+
+          // check position of dropdown and apply position styles accordingly
+          cDropdowns[i].classList.contains('--pos-top') ?
+          cDropdownMenus[i]
+          .style
+          .transform = 'translate3d(0px, 0px, 0px)' : console.log('bottom')
+
         } else {
           cDropdownMenus[i].classList.remove('show');
         }

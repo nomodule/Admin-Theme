@@ -4,7 +4,7 @@
 
 {% block contnet %}
 
-  {% include "partials/navigation.nunjucks" %}
+  {% include "partials/_navigation.nunjucks" %}
 
   {% include "partials/_cards.nunjucks" %}
 

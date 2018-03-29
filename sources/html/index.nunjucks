@@ -1,45 +1,6 @@
 {% extends "partials/layout.nunjucks" %}
 
 {% block contnet %}
-  {% include "partials/navigation.nunjucks" %}
-  <h1 class="display-1;">Dashboard</h1>
-
-  <div class="row">
-    <div class="column-md-up-4 column-xl-up-3 mb-base">
-      <div class="">
-        <div class="card">
-          <div class="card-body">
-            <p>column-md-up-4 column-xl-up-3 mb-base</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column-md-up-4 column-xl-up-3 mb-base">
-      <div class="">
-        <div class="card">
-          <div class="card-body">
-            <p>column-md-up-4 column-xl-up-3 mb-base</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column-md-up-4 column-xl-up-3 mb-base">
-      <div class="">
-        <div class="card">
-          <div class="card-body">
-            <p>column-md-up-4 column-xl-up-3 mb-base</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column-md-up-4 column-xl-up-3 mb-base">
-      <div class="">
-        <div class="card">
-          <div class="card-body">
-            <p>column-md-up-4 column-xl-up-3 mb-base</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include "partials/_navigation.nunjucks" %}
+  {% include "partials/_index.nunjucks" %}
 {% endblock %}

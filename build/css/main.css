@@ -1310,7 +1310,6 @@ p {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
   left: 0;
   min-width: 15rem;
   display: none;
@@ -1325,6 +1324,14 @@ p {
 
 .dropdown-menu.show {
   display: inline-block;
+}
+
+.dropdown.--pos-top .dropdown-menu {
+  bottom: 100%;
+}
+
+.dropdown.--pos-bottom .dropdown-menu {
+  top: 100%;
 }
 
 .dropdown-item {
