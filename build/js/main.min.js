@@ -87,11 +87,11 @@
 
           // check position of dropdown and apply position styles accordingly
           if (cDropdowns[i].classList.contains('--pos-tl')) {
-            console.log(cDropdownMenus[i].getBoundingClientRect(height));
-            cDropdownMenus[i].setAttribute('style', 'transform.: red')
+            const elemProps = cDropdowns[i].getBoundingClientRect();
+            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', -' +elemProps.height + 'px, 0px); top: 0; left: 0; right: auto;');
           } else if (cDropdowns[i].classList.contains('--pos-tr')) {
-            console.log("--pos-tr");
-            cDropdownMenus[i].setAttribute('style', 'color: red')
+            const elemProps = cDropdowns[i].getBoundingClientRect();
+            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', ' + elemProps.height + 'px, 0px); top: 0; right: 0; left: auto;');
           } else if (cDropdowns[i].classList.contains('--pos-bl')) {
             console.log("--pos-bl");
             cDropdownMenus[i].setAttribute('style', 'color: red')
