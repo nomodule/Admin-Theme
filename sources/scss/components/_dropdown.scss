@@ -25,13 +25,9 @@
       display: inline-block;
     }
   }
+  
+  &.--pos-tr &-menu {
 
-  &.--pos-top &-menu {
-    bottom: 100%;
-  }
-
-  &.--pos-bottom &-menu {
-    top: 100%;
   }
 
   &-item {
@@ -41,6 +37,7 @@
     color: $grey;
     background: $white;
     text-decoration: none;
+    user-select: none;
 
     &:hover, &:focus {
       background: lighten($grey, 50%);

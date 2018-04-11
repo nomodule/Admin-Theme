@@ -30,7 +30,8 @@
 }
 
 .row {
-  width: 100%;
+  margin-left: -($grid-gutter / 2);
+  margin-right: -($grid-gutter / 2);
 
   @include clearix;
 }

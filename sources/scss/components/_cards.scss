@@ -8,14 +8,56 @@
   }
 
   &-body {
-    padding: 1rem;
+    padding: 2rem;
     border-bottom-left-radius: $card-border-radius;
     border-bottom-right-radius: $card-border-radius;
-    border: 1px solid $grey;
   }
 
   img {
     display: block;
     width: 100%;
+  }
+}
+
+.icon {
+
+  & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: $white;
+  }
+
+  &-round {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    text-align: center;
+  }
+
+  &-bg-primary {
+    background: $primary;
+  }
+
+  &-bg-danger {
+    background: $danger;
+  }
+
+  &-bg-warning {
+    background: $warning;
+  }
+
+  &-bg-success {
+    background: $success;
+  }
+
+  &-bg-info {
+    background: $info;
+  }
+
+  &-text {
+    color: $text-muted;
+    line-height: 1;
   }
 }

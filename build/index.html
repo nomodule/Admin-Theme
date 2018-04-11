@@ -25,10 +25,27 @@
     <nav class="navbar-left ">
     <div class="navbar-left__header ">
       <!-- <a href="# " class="navbar-left__logo "><span class="sr-only ">Admin Template Logo</span><img src="https://res.cloudinary.com/ajayrawat/image/upload/v1508734485/logo_zdwi2d.svg "></a> -->
-      <a href="# " class="navbar-left__logo "><span class="sr-only ">Admin Template Logo</span><img src="img/admin-theme.png " alt="Admin Theme "></a>
       <button type="button" class="navbar-left__toggler " data-toggle="navbar-left__menu "><i class="fa fa-bars "></i></button>
+      <a href="# " class="navbar-left__logo "><span class="sr-only ">Admin Template Logo</span><img src="img/admin-theme.png " alt="Admin Theme "></a>
+      <div class="navbar-left__user">
+
+        <div class="dropdown --pos-right">
+          <span type="button " class="dropdown-toggler ">
+            <img src="https://i.ytimg.com/vi/3VWGMXR9dx0/maxresdefault.jpg" alt="avatar">
+          </span>
+          <div class="dropdown-menu ">
+            <a href="# " class="dropdown-item ">My Profile</a>
+            <a href="# " class="dropdown-item ">My Balance</a>
+            <a href="# " class="dropdown-item ">Inbox</a>
+            <div class="dropdown-divider "></div>
+            <a href="# " class="dropdown-item ">Account Settings</a>
+            <div class="dropdown-divider "></div>
+            <a href="# " class="dropdown-item ">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="navbar-left__menu ">
+    <div class="navbar-left__menu " data-simplebar>
       <ul>
         <li class="navbar-left__menu-item ">
           <a href="index.html " class="navbar-left__menu-link ">
@@ -268,41 +285,73 @@
       </ul>
     </div>
   </nav>
-  <h1 class="display-1;">Dashboard</h1>
+  
 
   <div class="row">
     <div class="column-md-up-4 column-xl-up-3 mb-base">
       <div class="">
-        <div class="card">
+        <div class="card card-dashboard-info">
           <div class="card-body">
-            <p>column-md-up-4 column-xl-up-3 mb-base</p>
+            <div class="d-flex">
+              <div class="icon icon-round icon-bg-primary mr-large">
+                <i class="fa fa-users"></i>
+              </div>
+              <div class="icon-text">
+                <h3 class="weight-normal">35648</h3>
+                <h6 class="weight-normal">New Customers</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="column-md-up-4 column-xl-up-3 mb-base">
       <div class="">
-        <div class="card">
+        <div class="card card-dashboard-danger">
           <div class="card-body">
-            <p>column-md-up-4 column-xl-up-3 mb-base</p>
+            <div class="d-flex">
+              <div class="icon icon-round icon-bg-danger mr-large">
+                <i class="fa fa-users"></i>
+              </div>
+              <div class="icon-text">
+                <h3 class="weight-normal">874</h3>
+                <h6 class="weight-normal">New Products</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="column-md-up-4 column-xl-up-3 mb-base">
       <div class="">
-        <div class="card">
+        <div class="card card-dashboard-warning">
           <div class="card-body">
-            <p>column-md-up-4 column-xl-up-3 mb-base</p>
+            <div class="d-flex">
+              <div class="icon icon-round icon-bg-warning mr-large">
+                <i class="fa fa-users"></i>
+              </div>
+              <div class="icon-text">
+                <h3 class="weight-normal">74%</h3>
+                <h6 class="weight-normal">Today's Profit</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="column-md-up-4 column-xl-up-3 mb-base">
       <div class="">
-        <div class="card">
+        <div class="card card-dashboard-success">
           <div class="card-body">
-            <p>column-md-up-4 column-xl-up-3 mb-base</p>
+            <div class="d-flex">
+              <div class="icon icon-round icon-bg-success mr-large">
+                <i class="fa fa-users"></i>
+              </div>
+              <div class="icon-text">
+                <h3 class="weight-normal">47%</h3>
+                <h6 class="weight-normal">New Leads</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>

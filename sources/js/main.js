@@ -81,17 +81,24 @@
         cDropdownItem = document.getElementsByClassName('dropdown-item');
 
     function dropDownMenuToggler(e) {
-
       for (var i = 0; i < cDropdownMenus.length; i++) {
         if (this === cDropdownTogglers[i]) {
           cDropdownMenus[i].classList.toggle('show');
 
           // check position of dropdown and apply position styles accordingly
-          cDropdowns[i].classList.contains('--pos-top') ?
-          cDropdownMenus[i]
-          .style
-          .transform = 'translate3d(0px, 0px, 0px)' : console.log('bottom')
-
+          if (cDropdowns[i].classList.contains('--pos-tl')) {
+            console.log(cDropdownMenus[i].getBoundingClientRect(height));
+            cDropdownMenus[i].setAttribute('style', 'transform.: red')
+          } else if (cDropdowns[i].classList.contains('--pos-tr')) {
+            console.log("--pos-tr");
+            cDropdownMenus[i].setAttribute('style', 'color: red')
+          } else if (cDropdowns[i].classList.contains('--pos-bl')) {
+            console.log("--pos-bl");
+            cDropdownMenus[i].setAttribute('style', 'color: red')
+          } else if (cDropdowns[i].classList.contains('--pos-br')) {
+            console.log("--pos-br");
+            cDropdownMenus[i].setAttribute('style', 'color: red')
+          }
         } else {
           cDropdownMenus[i].classList.remove('show');
         }

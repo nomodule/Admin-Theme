@@ -22,16 +22,48 @@
     height: $navbar-stripe-height; // 50px / 10
     border-bottom: 1px solid  map-get($theme-color, dark-900);
     background: #414550;
-    padding: $neev-y-padding $neev-x-padding;
+    padding: ($neev-y-padding / 5) $neev-x-padding;
   }
 
   &__logo {
     display: block;
     max-width: 15rem;
+    padding-right: 1rem;
+    border-right: 1px solid red;
 
     img {
       display: block;
       width: 100%;
+    }
+  }
+
+  &__user {
+    // scss variables do not work inside calc function
+    width: calc(#{$navbar-stripe-height} - 5px);
+    height: calc(#{$navbar-stripe-height} - 5px);
+    border: 1px solid transparent;
+    border-radius: 100%;
+    margin-left: auto;
+    background: $white;
+
+    .dropdown {
+      height: 100%;
+      width: 100%;
+    }
+
+    .dropdown-toggler {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 100%;
+      pointer-events: none;
+      user-select: none;
     }
   }
 
@@ -44,6 +76,7 @@
     text-align: right;
     padding: 0;
     border-radius: $border-radius-base;
+    margin-right: 1rem;
     cursor: pointer;
 
     &:hover, &:focus {
