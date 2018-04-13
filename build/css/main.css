@@ -1410,10 +1410,6 @@ p {
   z-index: 1;
 }
 
-.btn {
-  margin: 20px;
-}
-
 .alert {
   position: relative;
   display: block;
