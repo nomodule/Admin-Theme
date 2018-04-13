@@ -87,17 +87,19 @@
 
           // check position of dropdown and apply position styles accordingly
           if (cDropdowns[i].classList.contains('--pos-tl')) {
-            const elemProps = cDropdowns[i].getBoundingClientRect();
-            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', -' +elemProps.height + 'px, 0px); top: 0; left: 0; right: auto;');
+            const elemProps = cDropdownTogglers[i].getBoundingClientRect();
+            const elemStyle = getComputedStyle(cDropdownTogglers[i]);
+            console.log(elemStyle.marginBottom);
+            cDropdownMenus[i].setAttribute('style', 'position: absolute; top: 0; left: 0; transform: translate3d(' + elemProps.x + 'px, ' + (elemProps.height + cDropdownTogglers.marginTop) + 'px, 0px);');
           } else if (cDropdowns[i].classList.contains('--pos-tr')) {
-            const elemProps = cDropdowns[i].getBoundingClientRect();
-            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', ' + elemProps.height + 'px, 0px); top: 0; right: 0; left: auto;');
+            const elemProps = cDropdownMenus[i].getBoundingClientRect();
+            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', -' +elemProps.height + 'px, 0px); top: auto; right: 0; bottom: 0; left: auto;');
           } else if (cDropdowns[i].classList.contains('--pos-bl')) {
-            console.log("--pos-bl");
-            cDropdownMenus[i].setAttribute('style', 'color: red')
+            const elemProps = cDropdownMenus[i].getBoundingClientRect();
+            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', ' +elemProps.height + 'px, 0px); top: 0; right: auto; bottom: auto; left: 0;');
           } else if (cDropdowns[i].classList.contains('--pos-br')) {
-            console.log("--pos-br");
-            cDropdownMenus[i].setAttribute('style', 'color: red')
+            const elemProps = cDropdownMenus[i].getBoundingClientRect();
+            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', ' +elemProps.height + 'px, 0px); top: 0; right: 0; bottom: auto; left: auto;');
           }
         } else {
           cDropdownMenus[i].classList.remove('show');
