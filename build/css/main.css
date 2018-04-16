@@ -1289,7 +1289,17 @@ p {
   text-decoration: none;
   margin-bottom: 1rem;
   border: none;
+  outline: 0;
   cursor: pointer;
+}
+
+.btn:focus {
+  -webkit-transition: -webkit-box-shadow .2s ease;
+  transition: -webkit-box-shadow .2s ease;
+  -o-transition: box-shadow .2s ease;
+  -moz-transition: box-shadow .2s ease;
+  transition: box-shadow .2s ease;
+  transition: box-shadow .2s ease, -webkit-box-shadow .2s ease;
 }
 
 .btn--primary {
@@ -1301,6 +1311,15 @@ p {
   background-color: #1175c0;
 }
 
+.btn--primary:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(25, 145, 235, 0.4);
+          box-shadow: 0 0 0 3px rgba(25, 145, 235, 0.4);
+}
+
+.btn--primary:active {
+  background-color: #0f6cb2;
+}
+
 .btn--secondary {
   color: #fff;
   background-color: #8fa4ad;
@@ -1308,6 +1327,15 @@ p {
 
 .btn--secondary:hover, .btn--secondary:focus {
   background-color: #728c97;
+}
+
+.btn--secondary:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(143, 164, 173, 0.4);
+          box-shadow: 0 0 0 3px rgba(143, 164, 173, 0.4);
+}
+
+.btn--secondary:active {
+  background-color: #6a8590;
 }
 
 .btn--success {
@@ -1320,6 +1348,15 @@ p {
   background-color: #2d8e3a;
 }
 
+.btn--success:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(57, 181, 74, 0.4);
+          box-shadow: 0 0 0 3px rgba(57, 181, 74, 0.4);
+}
+
+.btn--success:active {
+  background-color: #298335;
+}
+
 .btn--danger {
   color: #fff;
   background-color: #f85359;
@@ -1328,6 +1365,15 @@ p {
 
 .btn--danger:hover, .btn--danger:focus {
   background-color: #f6222a;
+}
+
+.btn--danger:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(248, 83, 89, 0.4);
+          box-shadow: 0 0 0 3px rgba(248, 83, 89, 0.4);
+}
+
+.btn--danger:active {
+  background-color: #f5131c;
 }
 
 .btn--warning {
@@ -1340,6 +1386,15 @@ p {
   background-color: #d87e08;
 }
 
+.btn--warning:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(247, 152, 28, 0.4);
+          box-shadow: 0 0 0 3px rgba(247, 152, 28, 0.4);
+}
+
+.btn--warning:active {
+  background-color: #ca7507;
+}
+
 .btn--info {
   color: #fff;
   background-color: #01adff;
@@ -1348,6 +1403,15 @@ p {
 
 .btn--info:hover, .btn--info:focus {
   background-color: #008bcd;
+}
+
+.btn--info:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(1, 173, 255, 0.4);
+          box-shadow: 0 0 0 3px rgba(1, 173, 255, 0.4);
+}
+
+.btn--info:active {
+  background-color: #0080be;
 }
 
 .dropdown {

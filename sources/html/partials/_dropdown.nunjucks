@@ -1,3 +1,4 @@
+<h1 class="text-right">Dropdown</h1>
 <pre><code class="language-markup">&lt;div class="dropdown ">
   &lt;button type="button " class="btn btn--primary dropdown-toggler ">Primary Dropdown&lt;/button>
   &lt;div class="dropdown-menu ">
@@ -11,7 +12,7 @@
 </code></pre>
 
 <div class="dropdown --pos-tl">
-  <button type="button " class="btn btn--primary dropdown-toggler ">Primary Dropdown Top</button>
+  <button type="button " class="btn btn--primary dropdown-toggler ">Top Left</button>
   <div class="dropdown-menu ">
     <a href="# " class="dropdown-item ">Action</a>
     <a href="# " class="dropdown-item ">Another Action</a>
@@ -21,7 +22,7 @@
   </div>
 </div>
 <div class="dropdown --pos-tr">
-  <button type="button " class="btn btn--danger dropdown-toggler ">Danger Dropdown Bottom</button>
+  <button type="button " class="btn btn--danger dropdown-toggler ">Top Right</button>
   <div class="dropdown-menu ">
     <a href="# " class="dropdown-item ">Action</a>
     <a href="# " class="dropdown-item ">Another Action</a>
@@ -31,7 +32,7 @@
   </div>
 </div>
 <div class="dropdown --pos-bl">
-  <button type="button " class="btn btn--warning dropdown-toggler ">Warning Dropdown Top</button>
+  <button type="button " class="btn btn--warning dropdown-toggler ">Bottom Left</button>
   <div class="dropdown-menu ">
     <a href="# " class="dropdown-item ">Action</a>
     <a href="# " class="dropdown-item ">Another Action</a>
@@ -41,7 +42,7 @@
   </div>
 </div>
 <div class="dropdown --pos-br">
-  <button type="button " class="btn btn--info dropdown-toggler ">Info Dropdown Bottom</button>
+  <button type="button " class="btn btn--info dropdown-toggler ">Bottom Right</button>
   <div class="dropdown-menu ">
     <a href="# " class="dropdown-item ">Action</a>
     <a href="# " class="dropdown-item ">Another Action</a>
@@ -51,7 +52,7 @@
   </div>
 </div>
 <div class="dropdown ">
-  <button type="button " class="btn btn--success dropdown-toggler ">Success Dropdown Top</button>
+  <button type="button " class="btn btn--success dropdown-toggler ">Default (Bottom Left)</button>
   <div class="dropdown-menu ">
     <a href="# " class="dropdown-item ">Action</a>
     <a href="# " class="dropdown-item ">Another Action</a>

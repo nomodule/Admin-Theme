@@ -27,7 +27,7 @@
 
     // Navbar toggle
   	var cNavbarLeftHeader = document.querySelector('.navbar-left__header'),
-  			cNavbarLeftMenu = document.querySelector('.navbar-left__menu')
+  			cNavbarLeftMenu = document.querySelector('.navbar-left__menu'),
   			cNavbarLeftToggler = document.querySelector('.navbar-left__toggler');
 
     cNavbarLeftToggler.addEventListener('click', function(){
@@ -40,11 +40,15 @@
 
     function cNavbarDropdownToggler(e) {
       for(var i = 0; i < cNavbarDropdowns.length; i++) {
+        if (cNavbarDropdowns[i] === this) {
+          continue;
+        }
+        this.classList.toggle('open');
         cNavbarDropdowns[i].classList.remove('open')
       }
 
-      this.classList.toggle('open');
       this.querySelector('.sub-menu').classList.toggle('show');
+      console.log(this.classList);
     }
 
     attachClickEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler);
@@ -64,7 +68,13 @@
       } else {
         this.classList.remove('open');
       }
+
+      for (var i; i <= cNavbarDropdowns.length; i++) {
+        cNavbarDropdowns[i].classList.remove('open');
+      }
     });
+
+    console.log(cNavbarLeftMenu);
 
   })();
 
@@ -85,22 +95,31 @@
         if (this === cDropdownTogglers[i]) {
           cDropdownMenus[i].classList.toggle('show');
 
+          const elemProps = cDropdownTogglers[i].getBoundingClientRect();
+          const elemStyle = getComputedStyle(cDropdownTogglers[i]);
+
           // check position of dropdown and apply position styles accordingly
           if (cDropdowns[i].classList.contains('--pos-tl')) {
-            const elemProps = cDropdownTogglers[i].getBoundingClientRect();
-            const elemStyle = getComputedStyle(cDropdownTogglers[i]);
-            // console.log(elemProps.height + parseInt(elemStyle.marginBottom) + 'px');
-            cDropdownMenus[i].setAttribute('style', 'position: absolute; top: 0; left: 0; transform: translate3d(0'+ ', ' + (elemProps.height - (parseInt(elemStyle.marginBottom)) / 2) + 'px, 0px);');
+            cDropdownMenus[i]
+            .setAttribute('style', 'position: absolute; top: auto; left: 0; bottom: 0; transform: translate3d(' + elemStyle.marginLeft + ', -' + (elemProps.height + parseInt(elemStyle.marginBottom)) + 'px, 0px);');
+
           } else if (cDropdowns[i].classList.contains('--pos-tr')) {
-            const elemProps = cDropdownMenus[i].getBoundingClientRect();
-            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', -' +elemProps.height + 'px, 0px); top: auto; right: 0; bottom: 0; left: auto;');
+            cDropdownMenus[i]
+            .setAttribute('style', 'position: absolute; top: auto; left: auto; right: 0; bottom: 0; transform: translate3d(-'  + elemStyle.marginRight + ', -' + (elemProps.height + parseInt(elemStyle.marginBottom)) + 'px, 0px);');
+
           } else if (cDropdowns[i].classList.contains('--pos-bl')) {
-            const elemProps = cDropdownMenus[i].getBoundingClientRect();
-            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', ' +elemProps.height + 'px, 0px); top: 0; right: auto; bottom: auto; left: 0;');
+            cDropdownMenus[i]
+            .setAttribute('style', 'position: absolute; top: 0; left: 0; right: auto; bottom: auto; transform: translate3d(' + elemStyle.marginLeft + ', ' + (elemProps.height + parseInt(elemStyle.marginTop)) + 'px, 0px);');
+
           } else if (cDropdowns[i].classList.contains('--pos-br')) {
-            const elemProps = cDropdownMenus[i].getBoundingClientRect();
-            cDropdownMenus[i].setAttribute('style', 'transform: translate3d(' + 0 + ', ' +elemProps.height + 'px, 0px); top: 0; right: 0; bottom: auto; left: auto;');
+            cDropdownMenus[i]
+            .setAttribute('style', 'position: absolute; top: 0; left: auto; right: 0; bottom: auto; transform: translate3d(' + elemStyle.marginLeft + ', ' + (elemProps.height + parseInt(elemStyle.marginTop)) + 'px, 0px);');
+
+          } else {
+            cDropdownMenus[i]
+            .setAttribute('style', 'position: absolute; top: 0; left: 0; right: auto; bottom: auto; transform: translate3d(' + elemStyle.marginLeft + ', ' + (elemProps.height + parseInt(elemStyle.marginTop)) + 'px, 0px);');
           }
+
         } else {
           cDropdownMenus[i].classList.remove('show');
         }

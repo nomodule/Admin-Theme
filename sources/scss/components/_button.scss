@@ -1,6 +1,8 @@
 // Page specific variables
 
-$bg-dark-base: 10%;
+$bg-hover-base: 10%;
+$bg-active-base: 13%;
+$bg-focus-opacity: .4;
 
 .btn {
   
@@ -15,8 +17,13 @@ $bg-dark-base: 10%;
     text-decoration: none;
     margin-bottom: $vertical-rhythm-base;
     border: none;
+    outline: 0;
     cursor: pointer;
 
+  }
+
+  &:focus {
+    transition: box-shadow .2s ease;
   }
 
   &--primary {
@@ -24,7 +31,15 @@ $bg-dark-base: 10%;
     background-color: $primary;
 
     &:hover, &:focus {
-      background-color: darken($primary, $bg-dark-base);      
+      background-color: darken($primary, $bg-hover-base);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($primary, $bg-focus-opacity);
+    }
+
+    &:active {
+      background-color: darken($primary, $bg-active-base);
     }
   }
 
@@ -33,7 +48,15 @@ $bg-dark-base: 10%;
     background-color: $secondary;
 
     &:hover, &:focus {
-      background-color: darken($secondary, $bg-dark-base);      
+      background-color: darken($secondary, $bg-hover-base);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($secondary, $bg-focus-opacity);
+    }
+
+    &:active {
+      background-color: darken($secondary, $bg-active-base);
     }
   }
 
@@ -43,7 +66,15 @@ $bg-dark-base: 10%;
     border-color: $success;
 
     &:hover, &:focus {
-      background-color: darken($success, $bg-dark-base);      
+      background-color: darken($success, $bg-hover-base);      
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($success, $bg-focus-opacity);
+    }
+
+    &:active {
+      background-color: darken($success, $bg-active-base);
     }
   }
 
@@ -53,7 +84,15 @@ $bg-dark-base: 10%;
     border-color: $danger;
 
     &:hover, &:focus {
-      background-color: darken($danger, $bg-dark-base);      
+      background-color: darken($danger, $bg-hover-base);      
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($danger, $bg-focus-opacity);
+    }
+
+    &:active {
+      background-color: darken($danger, $bg-active-base);
     }
   }
 
@@ -63,7 +102,15 @@ $bg-dark-base: 10%;
     border-color: $warning;
 
     &:hover, &:focus {
-      background-color: darken($warning, $bg-dark-base);      
+      background-color: darken($warning, $bg-hover-base);      
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($warning, $bg-focus-opacity);
+    }
+
+    &:active {
+      background-color: darken($warning, $bg-active-base);
     }
   }
 
@@ -73,7 +120,15 @@ $bg-dark-base: 10%;
     border-color: $info;
 
     &:hover, &:focus {
-      background-color: darken($info, $bg-dark-base);      
+      background-color: darken($info, $bg-hover-base);      
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($info, $bg-focus-opacity);
+    }
+
+    &:active {
+      background-color: darken($info, $bg-active-base);
     }
   }
 }
