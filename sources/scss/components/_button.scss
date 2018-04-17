@@ -1,9 +1,3 @@
-// Page specific variables
-
-$bg-hover-base: 10%;
-$bg-active-base: 13%;
-$bg-focus-opacity: .4;
-
 .btn {
   
   & {
@@ -11,124 +5,86 @@ $bg-focus-opacity: .4;
     display: inline-block;
     font-family: inherit;
     font-size: 1.6em;
-    padding: .8rem 1.5em;
-    border-radius: .5rem;
+    padding: 0.5em 1.5em;
+    border-radius: 0.4em;
 
     text-decoration: none;
     margin-bottom: $vertical-rhythm-base;
     border: none;
     outline: 0;
     cursor: pointer;
+  }
 
+  // Buttons size
+
+  &--small {
+    font-size: 1.4rem;
+  }
+
+  &--large {
+    font-size: 1.8rem;
   }
 
   &:focus {
     transition: box-shadow .2s ease;
   }
-
+  
+  // Buttons types
   &--primary {
-    color: $white;
-    background-color: $primary;
-
-    &:hover, &:focus {
-      background-color: darken($primary, $bg-hover-base);
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px rgba($primary, $bg-focus-opacity);
-    }
-
-    &:active {
-      background-color: darken($primary, $bg-active-base);
-    }
+    @include solidButton($primary);
   }
 
   &--secondary {
-    color: $white;
-    background-color: $secondary;
-
-    &:hover, &:focus {
-      background-color: darken($secondary, $bg-hover-base);
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px rgba($secondary, $bg-focus-opacity);
-    }
-
-    &:active {
-      background-color: darken($secondary, $bg-active-base);
-    }
+    @include solidButton($secondary);
   }
 
   &--success {
-    color: $white;
-    background-color: $success;
-    border-color: $success;
-
-    &:hover, &:focus {
-      background-color: darken($success, $bg-hover-base);      
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px rgba($success, $bg-focus-opacity);
-    }
-
-    &:active {
-      background-color: darken($success, $bg-active-base);
-    }
+    @include solidButton($success);
   }
 
   &--danger {
-    color: $white;
-    background-color: $danger;
-    border-color: $danger;
-
-    &:hover, &:focus {
-      background-color: darken($danger, $bg-hover-base);      
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px rgba($danger, $bg-focus-opacity);
-    }
-
-    &:active {
-      background-color: darken($danger, $bg-active-base);
-    }
+    @include solidButton($danger);
   }
 
   &--warning {
-    color: $black;
-    background-color: $warning;
-    border-color: $warning;
-
-    &:hover, &:focus {
-      background-color: darken($warning, $bg-hover-base);      
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px rgba($warning, $bg-focus-opacity);
-    }
-
-    &:active {
-      background-color: darken($warning, $bg-active-base);
-    }
+    @include solidButton($warning);
   }
 
   &--info {
-    color: $white;
-    background-color: $info;
-    border-color: $info;
+    @include solidButton($info);
+  }
+}
 
-    &:hover, &:focus {
-      background-color: darken($info, $bg-hover-base);      
-    }
+// Outlined buttons styles
 
-    &:focus {
-      box-shadow: 0 0 0 3px rgba($info, $bg-focus-opacity);
-    }
+[class*="btn-outlined"] {
+  background: transparent;
+  border: 2px solid currentColor;
+}
 
-    &:active {
-      background-color: darken($info, $bg-active-base);
-    }
+.btn {
+
+  &-outlined-primary {
+    @include outlineButton($primary);
+  }
+
+  &-outlined-secondary {
+    @include outlineButton($secondary);
+  }
+
+  &-outlined-success {
+    @include outlineButton($success);
+  }
+
+  &-outlined-danger {
+    @include outlineButton($danger);
+  }
+
+  &-outlined-warning {
+    @include outlineButton($warning);
+  }
+
+  &-outlined-info {
+    @include outlineButton($info);
   }
 }

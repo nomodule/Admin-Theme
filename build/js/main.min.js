@@ -26,14 +26,20 @@
   (function(){
 
     // Navbar toggle
-  	var cNavbarLeftHeader = document.querySelector('.navbar-left__header'),
-  			cNavbarLeftMenu = document.querySelector('.navbar-left__menu'),
-  			cNavbarLeftToggler = document.querySelector('.navbar-left__toggler');
+  	var cNavbarLeftHeader = document.querySelector('.navbar-left__header');
+    var cNavbarLeftMenu = document.querySelector('.navbar-left__menu');
+  	var cNavbarLeftToggler = document.querySelector('.navbar-left__toggler');
 
     cNavbarLeftToggler.addEventListener('click', function(){
       cNavbarLeftMenu.classList.toggle('open');
       cNavbarLeftMenu.classList.toggle('stick');
     });
+
+      var navbarPs = new PerfectScrollbar(cNavbarLeftMenu, {
+        wheelSpeed: 2,
+        wheelPropagation: true,
+        minScrollbarLength: 20
+      });
 
     // Nvaber dropdown toggle
     var cNavbarDropdowns = document.querySelectorAll('.navbar-left__menu-item.--has-dropdown');
@@ -85,10 +91,10 @@
    * ------------------------------------------------------------------------
    */
   (function(){
-    var cDropdowns = document.getElementsByClassName('dropdown'),
-        cDropdownTogglers = document.getElementsByClassName('dropdown-toggler'),
-        cDropdownMenus = document.getElementsByClassName('dropdown-menu'),
-        cDropdownItem = document.getElementsByClassName('dropdown-item');
+    var cDropdowns = document.getElementsByClassName('dropdown');
+    var cDropdownTogglers = document.getElementsByClassName('dropdown-toggler');
+    var cDropdownMenus = document.getElementsByClassName('dropdown-menu');
+    var cDropdownItem = document.getElementsByClassName('dropdown-item');
 
     function dropDownMenuToggler(e) {
       for (var i = 0; i < cDropdownMenus.length; i++) {
@@ -156,8 +162,8 @@
    */
 
   (function(){
-    var cAlerts = document.getElementsByClassName('alert'),
-        cAlertCloseButtons = document.getElementsByClassName('alert-close');
+    var cAlerts = document.getElementsByClassName('alert');
+    var cAlertCloseButtons = document.getElementsByClassName('alert-close');
 
     function hideAlert() {
       this.parentNode.outerHTML = "";

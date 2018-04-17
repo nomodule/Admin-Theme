@@ -17,6 +17,26 @@
     display: block;
     width: 100%;
   }
+
+  &--primary {
+     border-top: 5px solid $primary;
+  }
+
+  &--danger {
+    border-top: 5px solid $danger;
+  }
+
+  &--warning {
+    border-top: 5px solid $warning;
+  }
+
+  &--success {
+    border-top: 5px solid $success;
+  }
+
+  &--info {
+    border-top: 5px solid $info;
+  }
 }
 
 .icon {
@@ -60,4 +80,8 @@
     color: $text-muted;
     line-height: 1;
   }
+}
+
+.card {
+  min-height: 260px;
 }

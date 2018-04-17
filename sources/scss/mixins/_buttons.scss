@@ -1,0 +1,45 @@
+$bg-hover-base: 10%;
+$bg-active-base: 13%;
+$bg-focus-opacity: .4;
+
+@mixin outlineButton($type) {
+  
+  & {
+    color: $type;
+  }
+
+  &:hover, &:focus {
+    color: $white;
+    border-color: $type;
+    background: $type;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($type, $bg-focus-opacity);
+  }
+
+  &:active {
+    background: darken($type, $bg-active-base);
+  }
+}
+
+@mixin solidButton($type) {
+  
+  & {
+    color: $white;
+    background: $type;
+    border-color: $type;
+  }
+
+  &:hover, &:focus {
+    background: darken($type, $bg-hover-base);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($type, $bg-focus-opacity);
+  }
+
+  &:active {
+    background: darken($type, $bg-active-base);
+  }
+}

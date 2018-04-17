@@ -16,4 +16,28 @@
 &lt;button class="btn btn--danger">Button Danger&lt;/button>
 </code></pre>
 
-<button class="btn ">Button Danger</button>
+<h2>Small Buttons</h2>
+<button class="btn btn--small">Button Default</button>
+<button class="btn btn--primary btn--small">Button Primary</button>
+<button class="btn btn--secondary btn--small">Button Secondary</button>
+<button class="btn btn--info btn--small">Button Info</button>
+<button class="btn btn--success btn--small">Button Success</button>
+<button class="btn btn--warning btn--small">Button Warning</button>
+<button class="btn btn--danger btn--small">Button Danger</button>
+
+<h2>Large Buttons</h2>
+<button class="btn btn--large">Button Default</button>
+<button class="btn btn--primary btn--large">Button Primary</button>
+<button class="btn btn--secondary btn--large">Button Secondary</button>
+<button class="btn btn--info btn--large">Button Info</button>
+<button class="btn btn--success btn--large">Button Success</button>
+<button class="btn btn--warning btn--large">Button Warning</button>
+<button class="btn btn--danger btn--large">Button Danger</button>
+
+<h2>Buttons Outlined</h2>
+<button class="btn btn-outlined-primary ">Button Primary</button>
+<button class="btn btn-outlined-secondary ">Button Secondary</button>
+<button class="btn btn-outlined-info ">Button Info</button>
+<button class="btn btn-outlined-success ">Button Success</button>
+<button class="btn btn-outlined-warning ">Button Warning</button>
+<button class="btn btn-outlined-danger ">Button Danger</button>
