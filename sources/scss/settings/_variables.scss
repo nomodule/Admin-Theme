@@ -35,6 +35,7 @@ $green: #39b54a !default;
 $yellow: #f7981c !default;
 $lightblue: #01adff !default;
 $red: #f85359 !default;
+$whitesmoke: whitesmoke !default;
 
 $dark-900: #37474e !default;
 $dark-800: #607d8a !default;
@@ -51,6 +52,7 @@ $secondary: $dark-700 !default;
 $black: #000 !default;
 $white: #fff !default;
 $grey: #6c757d !default;
+$offwhite: $whitesmoke !default;
 
 $text-muted: map-get($theme-color, dark-600);
 

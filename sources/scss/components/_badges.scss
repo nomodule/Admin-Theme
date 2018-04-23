@@ -1,0 +1,29 @@
+.badge {
+  
+  & {
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 400;
+    line-height: 1;
+    padding: .3em;
+    border-radius: 0.2em;
+    font-weight: bold;
+    letter-spacing: .5px;
+    color: $white;
+  }
+
+  &--primary { background: $primary; }
+  &--secondry { background: $secondary; }
+  &--success { background: $success; }
+  &--danger { background: $danger; }
+  &--warning { background: $warning; }
+  &--info { background: $info; }
+  &--light { color: $black; background: $offwhite; }
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
+  font-weight: normal;
+  padding: .2em .3em;
+}

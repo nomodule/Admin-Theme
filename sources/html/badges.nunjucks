@@ -1,0 +1,11 @@
+
+
+{% extends "partials/layout.nunjucks" %}
+
+{% block contnet %}
+
+  {% include "partials/_navigation.nunjucks" %}
+
+  {% include "partials/_badges.nunjucks" %}
+
+{% endblock %}

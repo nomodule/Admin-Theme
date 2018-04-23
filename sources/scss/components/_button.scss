@@ -6,7 +6,7 @@
     font-family: inherit;
     font-size: 1.6em;
     padding: 0.5em 1.5em;
-    border-radius: 0.4em;
+    border-radius: 0.3em;
 
     text-decoration: none;
     margin-bottom: $vertical-rhythm-base;
@@ -30,29 +30,14 @@
   }
   
   // Buttons types
-  &--primary {
-    @include solidButton($primary);
-  }
 
-  &--secondary {
-    @include solidButton($secondary);
-  }
-
-  &--success {
-    @include solidButton($success);
-  }
-
-  &--danger {
-    @include solidButton($danger);
-  }
-
-  &--warning {
-    @include solidButton($warning);
-  }
-
-  &--info {
-    @include solidButton($info);
-  }
+  &--secondary { @include solidButton($secondary); }
+  &--primary { @include solidButton($primary); }
+  &--success { @include solidButton($success); }
+  &--warning { @include solidButton($warning); }
+  &--light { @include solidButton($offwhite); }
+  &--danger { @include solidButton($danger); }
+  &--info { @include solidButton($info); }
 }
 
 // Outlined buttons styles
