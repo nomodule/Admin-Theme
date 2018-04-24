@@ -1,0 +1,41 @@
+.modal {
+
+  & {
+    display: block;
+    width: 100%;
+    border: 1px solid $lightgrey;
+    border-radius: .3rem;
+    background: $white;
+  }
+
+  &-body, &-header, &-footer {
+    padding: 1rem;
+  }
+
+  &-header {
+    position: relative;
+    border-bottom: 1px solid $lightgrey;
+  }
+
+  &-footer {
+    border-top: 1px solid $lightgrey;
+  }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+
+    font-size: 3rem;
+    opacity: .5;
+
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+
+}

@@ -4,15 +4,15 @@
     position: relative;
     display: inline-block;
     font-family: inherit;
-    font-size: 1.6em;
+    // font-size: 1.6em;
     padding: 0.5em 1.5em;
     border-radius: 0.3em;
 
     text-decoration: none;
-    margin-bottom: $vertical-rhythm-base;
     border: none;
     outline: 0;
     cursor: pointer;
+    user-select: none;
   }
 
   // Buttons size

@@ -22,6 +22,7 @@
 @import 'components/cards';
 @import 'components/code';
 @import 'components/badges';
+@import 'components/modals';
 // @import 'shared';
 
 // Utilities
@@ -29,6 +30,7 @@
 @import 'utilities/screen-readers';
 @import 'utilities/margin';
 @import 'utilities/display';
+@import 'utilities/align';
 
 body {
   background: whitesmoke;

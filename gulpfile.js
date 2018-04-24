@@ -34,7 +34,6 @@ gulp.task('css', function(){
     .pipe(autoprefixer({
       browsers: ['last 50 versions']
     }))
-    // uncomment below line to minify css
     // .pipe(minifyCSS())
     .pipe(sourcemaps.write(''))
     .pipe(gulp.dest('build/css'))
@@ -51,7 +50,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('watch', function(){
-  gulp.watch('build/*.html', ['html', 'nunjucksRender']);
+  // gulp.watch('build/*.html', ['html', 'nunjucksRender']);
   gulp.watch('sources/**/*.nunjucks', ['nunjucksRender']);
   gulp.watch('sources/scss/**/*.scss', ['css']);
   gulp.watch('sources/js/**/*.js', ['js']);
