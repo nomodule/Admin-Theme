@@ -1288,6 +1288,7 @@ p {
   -webkit-border-radius: 0.3em;
           border-radius: 0.3em;
   text-decoration: none;
+  text-align: center;
   border: none;
   outline: 0;
   cursor: pointer;
@@ -1593,7 +1594,7 @@ p {
 .dropdown-item {
   display: block;
   padding: .4rem 1rem;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   color: #6c757d;
   background: #fff;
   text-decoration: none;
@@ -1867,6 +1868,15 @@ pre[class*="language-"] {
 }
 
 .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-inner {
+  position: relative;
   display: block;
   width: 100%;
   border: 1px solid #d5d5d5;

@@ -173,4 +173,17 @@
 
   })();
 
+  (function(){
+    var cModals = document.getElementsByClassName('modal');
+    var cModalCloseButtons = document.getElementsByClassName('js-modal-close');
+
+    function hideModal() {
+      // this.parentNode.outerHTML = "";
+      this.closest('.modal').outerHTML = "";
+    }
+
+    attachClickEventOnArrayItems(cModalCloseButtons, hideModal);
+
+  })();
+
 })();
