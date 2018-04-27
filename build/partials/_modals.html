@@ -1,21 +1,27 @@
-<button class="btn btn--primary mb-large js-modal-launch">Launch Modal</button>
-<div class="row">
-  <div class="column-lg-up-6">
-    <div class="modal">
-      <div class="modal-inner mb-large">
-        <div class="modal-header"><h4>Header</h4><button class="modal-close js-modal-close">&times;</button></div>
-        <div class="modal-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod omnis reprehenderit accusamus a dolor quae est porro sunt ut, ea quaerat excepturi quasi voluptate quis officia repudiandae magnam voluptatem unde? ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-        <div class="modal-footer">
-          <div class="d-flex justify-right">
-            <a href="#" class="btn btn--secondary js-modal-close mr-small">Close</a>
-            <a href="#" class="btn btn--primary">Go somewhere</a>
-          </div>
-        </div>
+<button class="btn btn--primary mb-large js-modal-launch" data-target-modal="modal1">Launch Modal</button>
+<button class="btn btn--primary mb-large js-modal-launch" data-target-modal="modal2">Launch Modal</button>
+
+<div class="modal" id="modal1" role="dialog">
+  <div class="modal-inner mb-large">
+    <div class="modal-header"><h4>Header</h4><button class="modal-close js-modal-close">&times;</button></div>
+    <div class="modal-body"><p>Hey! You just cliked the launche button!</p></div>
+    <div class="modal-footer">
+      <div class="d-flex justify-right">
+        <a href="#" class="btn btn--secondary js-modal-close mr-small">Close</a>
+        <a href="#" class="btn btn--primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal2" role="dialog">
+  <div class="modal-inner mb-large">
+    <div class="modal-header"><h4>Header</h4><button class="modal-close js-modal-close">&times;</button></div>
+    <div class="modal-body"><p>Hi! I'm a modal and you?</p></div>
+    <div class="modal-footer">
+      <div class="d-flex justify-right">
+        <a href="#" class="btn btn--secondary js-modal-close mr-small">Close</a>
+        <a href="#" class="btn btn--primary">Go somewhere</a>
       </div>
     </div>
   </div>

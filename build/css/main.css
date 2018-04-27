@@ -1873,6 +1873,29 @@ pre[class*="language-"] {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 10002;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(-20%);
+     -moz-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+       -o-transform: translateY(-20%);
+          transform: translateY(-20%);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.modal.is-visible {
+  display: block;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: all;
 }
 
 .modal-inner {
@@ -1883,6 +1906,8 @@ pre[class*="language-"] {
   -webkit-border-radius: .3rem;
           border-radius: .3rem;
   background: #fff;
+  margin: 2rem auto;
+  max-width: 500px;
 }
 
 .modal-body, .modal-header, .modal-footer {
@@ -1912,6 +1937,20 @@ pre[class*="language-"] {
 
 .modal-close:hover, .modal-close:focus {
   opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .text-primary {

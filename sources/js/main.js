@@ -17,7 +17,6 @@
     }
   }
 
-
   /**
    * ------------------------------------------------------------------------
    * #NAVBAR
@@ -173,16 +172,50 @@
 
   })();
 
+    /**
+   * ------------------------------------------------------------------------
+   * #MODAL
+   * ------------------------------------------------------------------------
+   */
+
   (function(){
     var cModals = document.getElementsByClassName('modal');
+    var cModalLaunchers = document.querySelectorAll('[data-target-modal]');
     var cModalCloseButtons = document.getElementsByClassName('js-modal-close');
+    var cModalOverlay = document.createElement('div');
+    cModalOverlay.classList.add('overlay');
 
     function hideModal() {
-      // this.parentNode.outerHTML = "";
-      this.closest('.modal').outerHTML = "";
+
+      try {
+        this.closest('.modal').classList.remove('is-visible');
+        document.querySelector('.overlay').outerHTML = "";
+      } catch(e) {
+        // statements
+        console.error(e);
+        console.error('overlay element is not available in DOM');
+      }
     }
 
+    function launchModal() {
+      for ( var i = 0; i < cModals.length; i++ ) {
+        if( cModals[i].id == this.getAttribute('data-target-modal') ) {
+          cModals[i].classList.add('is-visible');
+        }
+      }
+
+      if (document.body.contains(cModalOverlay)) {
+        console.log('overlay exist!');
+      } else {
+        document.body.appendChild(cModalOverlay);
+      }
+    }
+    attachClickEventOnArrayItems(cModalLaunchers, launchModal);
     attachClickEventOnArrayItems(cModalCloseButtons, hideModal);
+
+    document.body.onkeyup = function(e) {
+      console.log(e.which);
+    }
 
   })();
 

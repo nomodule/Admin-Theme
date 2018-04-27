@@ -1,11 +1,24 @@
 .modal {
 
   & {
+    // display: none;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 10002;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20%);
+    transition: all .3s ease;
+  }
+
+  &.is-visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
   }
 
   &-inner {
@@ -15,6 +28,8 @@
     border: 1px solid $lightgrey;
     border-radius: .3rem;
     background: $white;
+    margin: 2rem auto;
+    max-width: 500px;
   }
 
   &-body, &-header, &-footer {
@@ -51,4 +66,15 @@
     // blah blah blah
   }
 
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10001;
+  background: rgba($black, .8);
+  transition: all .3s ease;
 }
