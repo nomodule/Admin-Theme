@@ -1,12 +1,12 @@
 "use-strict";
 
-;(function(){
+;(function(global){
 
   // #GLOBAL
 
-  function attachClickEventOnArrayItems(arr, fn) {
+  function attachClickEventOnArrayItems(arr, fn, eventName) {
     for (var i = 0; i < arr.length; i++) {
-      arr[i].addEventListener('click', fn);
+      arr[i].addEventListener(eventName, fn);
     }
   }
 
@@ -22,7 +22,6 @@
    * #NAVBAR
    * ------------------------------------------------------------------------
    */
-  (function(){
 
     // Navbar toggle
   	var cNavbarLeftHeader = document.querySelector('.navbar-left__header');
@@ -56,7 +55,7 @@
       console.log(this.classList);
     }
 
-    attachClickEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler);
+    attachClickEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler, 'click');
     
     // on hover navigation collapse toggle
     cNavbarLeftMenu.addEventListener('mouseover', function(){
@@ -79,17 +78,13 @@
       }
     });
 
-    console.log(cNavbarLeftMenu);
-
-  })();
-
 
   /**
    * ------------------------------------------------------------------------
    * #DROPDOWN
    * ------------------------------------------------------------------------
    */
-  (function(){
+
     var cDropdowns = document.getElementsByClassName('dropdown');
     var cDropdownTogglers = document.getElementsByClassName('dropdown-toggler');
     var cDropdownMenus = document.getElementsByClassName('dropdown-menu');
@@ -135,9 +130,9 @@
       this.parentNode.classList.remove('show');
     }
 
-    attachClickEventOnArrayItems(cDropdownItem, hideDropdown);
+    attachClickEventOnArrayItems(cDropdownItem, hideDropdown, 'click');
 
-    attachClickEventOnArrayItems(cDropdownTogglers, dropDownMenuToggler);
+    attachClickEventOnArrayItems(cDropdownTogglers, dropDownMenuToggler, 'click');
 
     // clicked outside dropdown menu handler
     function clickedOutsideDropdownMenu() {
@@ -151,7 +146,6 @@
     }
 
     clickedOutsideDropdownMenu();
-  })();
 
 
   /**
@@ -160,7 +154,6 @@
    * ------------------------------------------------------------------------
    */
 
-  (function(){
     var cAlerts = document.getElementsByClassName('alert');
     var cAlertCloseButtons = document.getElementsByClassName('alert-close');
 
@@ -168,55 +161,82 @@
       this.parentNode.outerHTML = "";
     }
 
-    attachClickEventOnArrayItems(cAlertCloseButtons, hideAlert);
-
-  })();
+    attachClickEventOnArrayItems(cAlertCloseButtons, hideAlert, 'click');
 
     /**
    * ------------------------------------------------------------------------
    * #MODAL
+   * Modal code is inpired by: https://bitsofco.de/accessible-modal-dialog/
    * ------------------------------------------------------------------------
    */
 
-  (function(){
     var cModals = document.getElementsByClassName('modal');
     var cModalLaunchers = document.querySelectorAll('[data-target-modal]');
     var cModalCloseButtons = document.getElementsByClassName('js-modal-close');
     var cModalOverlay = document.createElement('div');
     cModalOverlay.classList.add('overlay');
+    // this variable will contain elemnt which has focus while opening modal dialog
+    var focusedElem;
+    var focusableElms;
+
+    function launchModal(e) {
+      // get that element which has focus while opeinig modal dialog
+      focusedElem = document.activeElement;
+      for ( var i = 0; i < cModals.length; i++ ) {
+        if( cModals[i].id == this.getAttribute('data-target-modal') ) {
+          // get all of the focusable elements inside modal diablog
+          focusableElms = cModals[i].querySelectorAll('a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
+          // set focus on first focusable element in modal dialog
+          focusableElms[0].focus();
+          cModals[i].classList.add('is-visible');
+        }
+      }
+      // don't append modal dialog background overlay again if it is already exist in dom
+      if (document.body.contains(cModalOverlay)) {
+        console.log('overlay exist!');
+      } else {
+        // append modal dialog background overlay in dom and prevent it from getting focus
+        document.body.appendChild(cModalOverlay).setAttribute('tabindex', -1);
+      }
+    }
 
     function hideModal() {
-
+      // set focus on the elemnt which has it before opeinig modal
+      focusedElem.focus();
       try {
         this.closest('.modal').classList.remove('is-visible');
         document.querySelector('.overlay').outerHTML = "";
-      } catch(e) {
+        } catch(e) {
         // statements
         console.error(e);
         console.error('overlay element is not available in DOM');
       }
     }
 
-    function launchModal() {
-      for ( var i = 0; i < cModals.length; i++ ) {
-        if( cModals[i].id == this.getAttribute('data-target-modal') ) {
-          cModals[i].classList.add('is-visible');
-        }
-      }
+    var TAB_KEY = 9;
+    var SHIFT_KEY = 16;
 
-      if (document.body.contains(cModalOverlay)) {
-        console.log('overlay exist!');
-      } else {
-        document.body.appendChild(cModalOverlay);
-      }
+    function modalTabKeyHandler(e) {
+      console.log('hi');
+
+      // if (e.which === TAB_KEY) {
+      //   handleTabIncreament();
+      // }
+      // if (e.which === SHIFT_KEY) {
+      //   handleTabDicrement();
+      // }
+
+      // switch (expression) {
+      //   case label_1:
+      //     // statements_1
+      //     break;
+      //   default:
+      //     // statements_def
+      //     break;
+      // }
     }
-    attachClickEventOnArrayItems(cModalLaunchers, launchModal);
-    attachClickEventOnArrayItems(cModalCloseButtons, hideModal);
+    attachClickEventOnArrayItems(cModals, modalTabKeyHandler, 'onkeyup');
+    attachClickEventOnArrayItems(cModalLaunchers, launchModal, 'click');
+    attachClickEventOnArrayItems(cModalCloseButtons, hideModal, 'click');
 
-    document.body.onkeyup = function(e) {
-      console.log(e.which);
-    }
-
-  })();
-
-})();
+})(this);

@@ -77,4 +77,8 @@
   z-index: 10001;
   background: rgba($black, .8);
   transition: all .3s ease;
+
+  &:focus {
+    border: 5px solid red;
+  }
 }

@@ -1953,6 +1953,10 @@ pre[class*="language-"] {
   transition: all .3s ease;
 }
 
+.overlay:focus {
+  border: 5px solid red;
+}
+
 .text-primary {
   color: #1991eb;
 }
