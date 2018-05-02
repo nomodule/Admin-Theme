@@ -4,7 +4,7 @@
 
   // #GLOBAL
 
-  function attachClickEventOnArrayItems(arr, fn, eventName) {
+  function attachEventOnArrayItems(arr, fn, eventName) {
     for (var i = 0; i < arr.length; i++) {
       arr[i].addEventListener(eventName, fn);
     }
@@ -55,7 +55,7 @@
       console.log(this.classList);
     }
 
-    attachClickEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler, 'click');
+    attachEventOnArrayItems(cNavbarDropdowns, cNavbarDropdownToggler, 'click');
     
     // on hover navigation collapse toggle
     cNavbarLeftMenu.addEventListener('mouseover', function(){
@@ -130,13 +130,14 @@
       this.parentNode.classList.remove('show');
     }
 
-    attachClickEventOnArrayItems(cDropdownItem, hideDropdown, 'click');
+    attachEventOnArrayItems(cDropdownItem, hideDropdown, 'click');
 
-    attachClickEventOnArrayItems(cDropdownTogglers, dropDownMenuToggler, 'click');
+    attachEventOnArrayItems(cDropdownTogglers, dropDownMenuToggler, 'click');
 
     // clicked outside dropdown menu handler
     function clickedOutsideDropdownMenu() {
       document.addEventListener('click', function(e){
+        console.log('Hi')
         if (!e.target.classList.contains('dropdown-toggler')) {
           for (var i = 0; i < cDropdownMenus.length; i++) {
             cDropdownMenus[i].classList.remove('show');
@@ -161,7 +162,7 @@
       this.parentNode.outerHTML = "";
     }
 
-    attachClickEventOnArrayItems(cAlertCloseButtons, hideAlert, 'click');
+    attachEventOnArrayItems(cAlertCloseButtons, hideAlert, 'click');
 
     /**
    * ------------------------------------------------------------------------
@@ -178,38 +179,50 @@
     // this variable will contain elemnt which has focus while opening modal dialog
     var focusedElem;
     var focusableElms;
+    var modalState = 'inactive';
 
     function launchModal(e) {
-      // get that element which has focus while opeinig modal dialog
-      focusedElem = document.activeElement;
-      for ( var i = 0; i < cModals.length; i++ ) {
-        if( cModals[i].id == this.getAttribute('data-target-modal') ) {
-          // get all of the focusable elements inside modal diablog
-          focusableElms = cModals[i].querySelectorAll('a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-          // set focus on first focusable element in modal dialog
-          focusableElms[0].focus();
-          cModals[i].classList.add('is-visible');
+      if (modalState === 'inactive') {
+        // get that element which has focus while opeinig modal dialog
+        focusedElem = document.activeElement;
+        for ( var i = 0; i < cModals.length; i++ ) {
+          if( cModals[i].id == this.getAttribute('data-target-modal') ) {
+            // get all of the focusable elements inside modal diablog
+            focusableElms = cModals[i].querySelectorAll('a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
+            // set focus on first focusable element in modal dialog
+            focusableElms[0].focus();
+            cModals[i].classList.add('is-visible');
+          }
         }
+        // don't append modal dialog background overlay again if it is already exist in dom
+        if (document.body.contains(cModalOverlay)) {
+          console.log('overlay exist!');
+        } else {
+          // append modal dialog background overlay in dom and prevent it from getting focus
+          document.body.appendChild(cModalOverlay).setAttribute('tabindex', -1);
+        }
+
+        modalState = 'active';
       }
-      // don't append modal dialog background overlay again if it is already exist in dom
-      if (document.body.contains(cModalOverlay)) {
-        console.log('overlay exist!');
-      } else {
-        // append modal dialog background overlay in dom and prevent it from getting focus
-        document.body.appendChild(cModalOverlay).setAttribute('tabindex', -1);
-      }
+
+      // start handling tab key after launching modal
+      modalTabKeyHandler();
     }
 
     function hideModal() {
-      // set focus on the elemnt which has it before opeinig modal
-      focusedElem.focus();
-      try {
-        this.closest('.modal').classList.remove('is-visible');
-        document.querySelector('.overlay').outerHTML = "";
-        } catch(e) {
-        // statements
-        console.error(e);
-        console.error('overlay element is not available in DOM');
+      if (modalState === 'active') {
+        // set focus on the elemnt which has it before opeinig modal
+        focusedElem.focus();
+        try {
+          this.closest('.modal').classList.remove('is-visible');
+          document.querySelector('.overlay').outerHTML = "";
+          } catch(e) {
+          // statements
+          console.error(e);
+          console.error('overlay element is not available in DOM');
+        }
+
+        modalState = 'inactive';
       }
     }
 
@@ -217,7 +230,6 @@
     var SHIFT_KEY = 16;
 
     function modalTabKeyHandler(e) {
-      console.log('hi');
 
       // if (e.which === TAB_KEY) {
       //   handleTabIncreament();
@@ -235,8 +247,8 @@
       //     break;
       // }
     }
-    attachClickEventOnArrayItems(cModals, modalTabKeyHandler, 'onkeyup');
-    attachClickEventOnArrayItems(cModalLaunchers, launchModal, 'click');
-    attachClickEventOnArrayItems(cModalCloseButtons, hideModal, 'click');
+    attachEventOnArrayItems(cModalLaunchers, launchModal, 'click');
+    attachEventOnArrayItems(cModalCloseButtons, hideModal, 'click');
+
 
 })(this);
