@@ -137,7 +137,6 @@
     // clicked outside dropdown menu handler
     function clickedOutsideDropdownMenu() {
       document.addEventListener('click', function(e){
-        console.log('Hi')
         if (!e.target.classList.contains('dropdown-toggler')) {
           for (var i = 0; i < cDropdownMenus.length; i++) {
             cDropdownMenus[i].classList.remove('show');
@@ -175,11 +174,14 @@
     var cModalLaunchers = document.querySelectorAll('[data-target-modal]');
     var cModalCloseButtons = document.getElementsByClassName('js-modal-close');
     var cModalOverlay = document.createElement('div');
+
     cModalOverlay.classList.add('overlay');
     // this variable will contain elemnt which has focus while opening modal dialog
     var focusedElem;
     var focusableElms;
     var modalState = 'inactive';
+    var TAB_KEY = 9;
+    var SHIFT_KEY = 16;
 
     function launchModal(e) {
       if (modalState === 'inactive') {
@@ -202,12 +204,21 @@
           document.body.appendChild(cModalOverlay).setAttribute('tabindex', -1);
         }
 
+        // get current visible modal
+        cVisibleModal = document.querySelector('.modal.is-visible');
         modalState = 'active';
       }
 
-      // start handling tab key after launching modal
-      modalTabKeyHandler();
+      cVisibleModal.addEventListener('keyup', function(e){
+        if (e.which === TAB_KEY) {
+          handleTabIncreament();
+        }
+        if (e.which === SHIFT_KEY) {
+          handleTabDicrement();
+        }
+      });
     }
+
 
     function hideModal() {
       if (modalState === 'active') {
@@ -226,29 +237,20 @@
       }
     }
 
-    var TAB_KEY = 9;
-    var SHIFT_KEY = 16;
-
-    function modalTabKeyHandler(e) {
-
-      // if (e.which === TAB_KEY) {
-      //   handleTabIncreament();
-      // }
-      // if (e.which === SHIFT_KEY) {
-      //   handleTabDicrement();
-      // }
-
-      // switch (expression) {
-      //   case label_1:
-      //     // statements_1
-      //     break;
-      //   default:
-      //     // statements_def
-      //     break;
-      // }
+    function handleTabIncreament(e) {
+      console.log(focusableElms);
+      if(document.activeElement === focusableElms[focusableElms.length - 1]) {
+        focusableElms[0].focus();
+      }
     }
+
+    function handleTabDicrement(e) {
+      if(document.activeElement === focusableElms[0]) {
+        focusableElms[focusableElms.length - 1].focus();
+      }
+    }
+
     attachEventOnArrayItems(cModalLaunchers, launchModal, 'click');
     attachEventOnArrayItems(cModalCloseButtons, hideModal, 'click');
-
 
 })(this);
