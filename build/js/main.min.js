@@ -175,7 +175,7 @@
     var cModalCloseButtons = document.getElementsByClassName('js-modal-close');
     var cModalOverlay = document.createElement('div');
 
-    cModalOverlay.classList.add('overlay');
+    cModalOverlay.classList.add('js-modal-overlay');
     // this variable will contain elemnt which has focus while opening modal dialog
     var focusedElem;
     var focusableElms;
@@ -213,7 +213,7 @@
         if (e.which === TAB_KEY) {
           handleTabIncreament();
         }
-        if (e.which === SHIFT_KEY) {
+        if (e.shiftKey && e.which === TAB_KEY) {
           handleTabDicrement();
         }
       });
@@ -226,7 +226,7 @@
         focusedElem.focus();
         try {
           this.closest('.modal').classList.remove('is-visible');
-          document.querySelector('.overlay').outerHTML = "";
+          document.querySelector('.js-modal-overlay').outerHTML = "";
           } catch(e) {
           // statements
           console.error(e);
@@ -238,7 +238,6 @@
     }
 
     function handleTabIncreament(e) {
-      console.log(focusableElms);
       if(document.activeElement === focusableElms[focusableElms.length - 1]) {
         focusableElms[0].focus();
       }

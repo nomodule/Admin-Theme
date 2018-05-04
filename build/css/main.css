@@ -1939,22 +1939,18 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
-.overlay {
+.js-modal-overlay {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 10001;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
-}
-
-.overlay:focus {
-  border: 5px solid red;
 }
 
 .text-primary {

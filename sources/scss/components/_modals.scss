@@ -63,22 +63,18 @@
   }
 
   &-close-trigger {
-    // blah blah blah
+    
   }
 
 }
 
-.overlay {
+.js-modal-overlay {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 10001;
-  background: rgba($black, .8);
+  background: rgba($black, .4);
   transition: all .3s ease;
-
-  &:focus {
-    border: 5px solid red;
-  }
 }

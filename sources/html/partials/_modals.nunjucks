@@ -2,7 +2,7 @@
 <button class="btn btn--primary mb-large js-modal-launch" data-target-modal="modal2">Launch Modal</button>
 
 <div class="modal" id="modal1" role="dialog">
-  <div class="modal-inner mb-large">
+  <div class="modal-inner">
     <div class="modal-header"><h4>Header</h4><button class="modal-close js-modal-close">&times;</button></div>
     <div class="modal-body"><p>Hey! You just cliked the launche button!</p></div>
     <div class="modal-footer">
@@ -15,7 +15,7 @@
 </div>
 
 <div class="modal" id="modal2" role="dialog">
-  <div class="modal-inner mb-large">
+  <div class="modal-inner">
     <div class="modal-header"><h4>Header</h4><button class="modal-close js-modal-close">&times;</button></div>
     <div class="modal-body"><p>Hi! I'm a modal and you?</p></div>
     <div class="modal-footer">
