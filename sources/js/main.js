@@ -178,14 +178,14 @@
     cModalOverlay.classList.add('js-modal-overlay');
     // this variable will contain elemnt which has focus while opening modal dialog
     var focusedElem;
-    var focusableElms;
+    global.focusableElms;
     var modalState = 'inactive';
     var TAB_KEY = 9;
     var SHIFT_KEY = 16;
 
     function launchModal(e) {
       if (modalState === 'inactive') {
-        // get that element which has focus while opeinig modal dialog
+        // get that element which has focus while opening modal dialog
         focusedElem = document.activeElement;
         for ( var i = 0; i < cModals.length; i++ ) {
           if( cModals[i].id == this.getAttribute('data-target-modal') ) {
@@ -209,7 +209,7 @@
         modalState = 'active';
       }
 
-      cVisibleModal.addEventListener('keyup', function(e){
+      cVisibleModal.addEventListener('keydown', function(e){
         if (e.which === TAB_KEY) {
           handleTabIncreament();
         }
@@ -239,7 +239,8 @@
 
     function handleTabIncreament(e) {
       if(document.activeElement === focusableElms[focusableElms.length - 1]) {
-        focusableElms[0].focus();
+        console.log(global.focusableElms[0]);
+        global.focusableElms[0].focus();
       }
     }
 
@@ -252,4 +253,4 @@
     attachEventOnArrayItems(cModalLaunchers, launchModal, 'click');
     attachEventOnArrayItems(cModalCloseButtons, hideModal, 'click');
 
-})(this);
+})(window);
