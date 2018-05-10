@@ -6,6 +6,6 @@
 
   {% include "partials/_navigation.nunjucks" %}
 
-  {% include "partials/_cards.nunjucks" %}
+  {% include "partials/_switches.nunjucks" %}
 
 {% endblock %}

@@ -237,20 +237,56 @@
       }
     }
 
-    function handleTabIncreament(e) {
+    function handleTabIncreament() {
       if(document.activeElement === focusableElms[focusableElms.length - 1]) {
         console.log(global.focusableElms[0]);
         global.focusableElms[0].focus();
       }
     }
 
-    function handleTabDicrement(e) {
+    function handleTabDicrement() {
       if(document.activeElement === focusableElms[0]) {
         focusableElms[focusableElms.length - 1].focus();
       }
     }
 
+    
+
     attachEventOnArrayItems(cModalLaunchers, launchModal, 'click');
     attachEventOnArrayItems(cModalCloseButtons, hideModal, 'click');
 
-})(window);
+    // #Switcher
+
+    var cCheckboxSwitcher = document.getElementsByClassName('js-checkbox-swicth');
+    var cCheckboxSwitcherHTML = document.createElement('div');
+    cCheckboxSwitcherHTML.classList.add('checkbox-swicth');
+
+    // construct checkbox switcher html
+
+
+    // function switcher() {
+    //   for (var i = 0; i < cCheckboxSwitcher.length; i++) {
+    //     var cRandomId = '_' + Math.random().toString(36).substr(2, 9);
+    //     console.log(cRandomId);
+    //     cCheckboxSwitcherHTML.innerHTML = '<input type="checkbox" class="js-checkbox-swicth_" id="switcher' + cRandomId +'"> <label class="" for="switcher'+ cRandomId + '" ></label>';
+    //     cCheckboxSwitcher[i].parentNode.insertBefore(cCheckboxSwitcherHTML, cCheckboxSwitcher[i]);
+    //   }
+    // }
+
+    var myArr = ["one", "two", "three", "four", "five"];
+
+    function switcher() {
+      for (var i = 0; i < cCheckboxSwitcher.length; i++) {
+        var cRandomId = '_' + Math.random().toString(36).substr(2, 9);
+        cCheckboxSwitcherHTML.innerHTML = '<input type="checkbox" class="js-checkbox-swicth_" id="switcher' + cRandomId +'"> <label class="" for="switcher'+ cRandomId + '" ></label>';
+        cCheckboxSwitcher[i] = "string";
+        myArr[i] = "string";
+      }
+
+      console.log(cCheckboxSwitcher);
+      console.log(myArr);
+    }
+
+    switcher();
+
+}(window));

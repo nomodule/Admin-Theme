@@ -2,7 +2,7 @@
 
 {% extends "partials/layout.nunjucks" %}
 
-{% block contnet %}
+{% block content %}
 
   {% include "partials/_navigation.nunjucks" %}
 

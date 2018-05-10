@@ -1,412 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <!-- tell browser to render this page responsive -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Material Icons  -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <!-- normalize css -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <!-- font-awesome cdn -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- code highlighting prism cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
-  <!-- custom scrollbar cdn -->
-  <link rel="stylesheet" href="https://rawgit.com/utatti/perfect-scrollbar/master/css/perfect-scrollbar.css" />
-  <!-- admin theme css -->
-  <link rel="stylesheet" href="css/main.css">
-  <title>Admin Template</title>
-
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <!-- tell browser to render this page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Material Icons  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- code highlighting prism cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+    <!-- custom scrollbar cdn -->
+    <link rel="stylesheet" href="https://rawgit.com/utatti/perfect-scrollbar/master/css/perfect-scrollbar.css" />
+    <!-- admin theme css -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Admin Template</title>
+    <style>
     #__bs_notify__ {
-      display: none !important;
+    display: none !important;
     }
-  </style>
-
-</head>
-<body>
-  
+    </style>
+  </head>
+  <body>
+    
   <div class="page-wrapper">
     
 
+    <!-- Navbar starts here -->
     <nav class="navbar-left ">
-    <div class="navbar-left__header ">
-      <!-- <a href="# " class="navbar-left__logo "><span class="sr-only ">Admin Template Logo</span><img src="https://res.cloudinary.com/ajayrawat/image/upload/v1508734485/logo_zdwi2d.svg "></a> -->
-      <button type="button" class="navbar-left__toggler " data-toggle="navbar-left__menu "><i class="fa fa-bars "></i></button>
-      <a href="# " class="navbar-left__logo "><span class="sr-only ">Admin Template Logo</span><img src="img/admin-theme.png " alt="Admin Theme "></a>
-      <div class="navbar-left__user">
-
-        <div class="dropdown --pos-br">
-          <span type="button " class="dropdown-toggler ">
-            <img src="https://i.ytimg.com/vi/3VWGMXR9dx0/maxresdefault.jpg" alt="avatar">
-          </span>
-          <div class="dropdown-menu ">
-            <a href="# " class="dropdown-item ">My Profile</a>
-            <a href="# " class="dropdown-item ">My Balance</a>
-            <a href="# " class="dropdown-item ">Inbox</a>
-            <div class="dropdown-divider "></div>
-            <a href="# " class="dropdown-item ">Account Settings</a>
-            <div class="dropdown-divider "></div>
-            <a href="# " class="dropdown-item ">Logout</a>
+      <div class="navbar-left__header ">
+        <!-- <a href="# " class="navbar-left__logo "><span class="sr-only ">Admin Template Logo</span><img src="https://res.cloudinary.com/ajayrawat/image/upload/v1508734485/logo_zdwi2d.svg "></a> -->
+        <button type="button" class="navbar-left__toggler " data-toggle="navbar-left__menu "><i class="fa fa-bars "></i></button>
+        <a href="# " class="navbar-left__logo "><span class="sr-only ">Admin Template Logo</span><img src="img/admin-theme.png " alt="Admin Theme "></a>
+        <div class="navbar-left__user">
+          <div class="dropdown --pos-br">
+            <span type="button " class="dropdown-toggler ">
+              <img src="https://i.ytimg.com/vi/3VWGMXR9dx0/maxresdefault.jpg" alt="avatar">
+            </span>
+            <div class="dropdown-menu ">
+              <a href="# " class="dropdown-item ">My Profile</a>
+              <a href="# " class="dropdown-item ">My Balance</a>
+              <a href="# " class="dropdown-item ">Inbox</a>
+              <div class="dropdown-divider "></div>
+              <a href="# " class="dropdown-item ">Account Settings</a>
+              <div class="dropdown-divider "></div>
+              <a href="# " class="dropdown-item ">Logout</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="navbar-left__menu " data-simplebar>
-      <ul>
-        <li class="navbar-left__menu-item ">
-          <a href="index.html " class="navbar-left__menu-link ">
-            <i class="fa fa-dashboard "></i>
-            <span class="navbar-left__menu-link-text ">Dashboard</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item-divider ">UI Elements</li>
-        <li class="navbar-left__menu-item --has-dropdown ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-laptop "></i>
-            <span class="navbar-left__menu-link-text ">Components</span>
-          </a>
-          <ul class="sub-menu ">
-            <li class="navbar-left__menu-item ">
-              <a href="button.html " class="navbar-left__menu-link ">
-                <i class="fa fa-puzzle-piece "></i>
-                <span class="navbar-left__menu-link-text ">Buttons</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item \">
-              <a href="dropdown.html " class="navbar-left__menu-link ">
-                <i class="fa fa-caret-down "></i>
-                <span class="navbar-left__menu-link-text ">Dropdowns</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="badges.html " class="navbar-left__menu-link ">
-                <i class="fa fa-id-badge "></i>
-                <span class="navbar-left__menu-link-text ">Badges</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-bars "></i>
-                <span class="navbar-left__menu-link-text ">Tabs</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-share-square-o "></i>
-                <span class="navbar-left__menu-link-text ">Social Buttons</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="cards.html " class="navbar-left__menu-link ">
-                <i class="fa fa-id-card-o "></i>
-                <span class="navbar-left__menu-link-text ">Cards</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="alert.html " class="navbar-left__menu-link ">
-                <i class="fa fa-exclamation-triangle "></i>
-                <span class="navbar-left__menu-link-text ">Alerts</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-spinner "></i>
-                <span class="navbar-left__menu-link-text ">Progress Bars</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="modals.html " class="navbar-left__menu-link ">
-                <i class="fa fa-fire "></i>
-                <span class="navbar-left__menu-link-text ">Modals</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-book "></i>
-                <span class="navbar-left__menu-link-text ">Switchs</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-th "></i>
-                <span class="navbar-left__menu-link-text ">Grids</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-file-word-o "></i>
-                <span class="navbar-left__menu-link-text ">Typography</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="navbar-left__menu-item --has-dropdown ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-table "></i>
-            <span class="navbar-left__menu-link-text ">Tables</span>
-          </a>
-          <ul class="sub-menu ">
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-table "></i>
-                <span class="navbar-left__menu-link-text ">Basic Table</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-table "></i>
-                <span class="navbar-left__menu-link-text ">Data Table</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="navbar-left__menu-item --has-dropdown ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-th "></i>
-            <span class="navbar-left__menu-link-text ">Forms</span>
-          </a>
-          <ul class="sub-menu ">
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-th "></i>
-                <span class="navbar-left__menu-link-text ">Basic Forms</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-th "></i>
-                <span class="navbar-left__menu-link-text ">Advanced Forms</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="navbar-left__menu-item-divider ">Icons</li>
-        <li class="navbar-left__menu-item --has-dropdown ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-tasks "></i>
-            <span class="navbar-left__menu-link-text ">Icons</span>
-          </a>
-          <ul class="sub-menu ">
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-fort-awesome "></i>
-                <span class="navbar-left__menu-link-text ">Font Awesome</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-envelope "></i>
-            <span class="navbar-left__menu-link-text ">Widget</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item --has-dropdown ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-bar-chart "></i>
-            <span class="navbar-left__menu-link-text ">Charts</span>
-          </a>
-          <ul class="sub-menu ">
-            <li class="navbar-left__menu-item ">
-              <a href="# " class="navbar-left__menu-link ">
-                <i class="fa fa-line-chart "></i>
-                <span class="navbar-left__menu-link-text ">Chart js</span>
-              </a>
-            </li>
-            <li class="navbar-left__menu-item "><a href="# " class="navbar-left__menu-link "><i class="fa fa-area-chart "></i><span class="navbar-left__menu-link-text ">Float Chart</span></a></li>
-            <li class="navbar-left__menu-item "><a href="# " class="navbar-left__menu-link "><i class="fa fa-pie-chart "></i><span class="navbar-left__menu-link-text ">Peity Chart</span></a></li>
-          </ul>
-        </li>
-        <li class="navbar-left__menu-item --has-dropdown ">
-          <a href="# " class="navbar-left__menu-link "><i class="fa fa-area-chart "></i><span class="navbar-left__menu-link-text ">Maps</span></a>
-          <ul class="sub-menu ">
-            <li class="navbar-left__menu-item "><a href="# " class="navbar-left__menu-link "><i class="fa fa-map-o "></i><span class="navbar-left__menu-link-text ">Google Maps</span></a></li>
-            <li class="navbar-left__menu-item "><a href="# " class="navbar-left__menu-link "><i class="fa fa-street-view "></i><span class="navbar-left__menu-link-text ">Vector Maps</span></a></li>
-          </ul>
-        </li>
-        <li class="navbar-left__menu-item-divider ">Extras</li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-glass "></i>
-            <span class="navbar-left__menu-link-text ">Pages</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-dashboard "></i>
-            <span class="navbar-left__menu-link-text ">Dashboard</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item-divider ">UI Elements</li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-laptop "></i>
-            <span class="navbar-left__menu-link-text ">Components</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-table "></i>
-            <span class="navbar-left__menu-link-text ">Tables</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-th "></i>
-            <span class="navbar-left__menu-link-text ">Forms</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item-divider ">Icons</li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-tasks "></i>
-            <span class="navbar-left__menu-link-text ">Icons</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-envelope "></i>
-            <span class="navbar-left__menu-link-text ">Widget</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-bar-chart "></i>
-            <span class="navbar-left__menu-link-text ">Charts</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-area-chart "></i>
-            <span class="navbar-left__menu-link-text ">Maps</span>
-          </a>
-        </li>
-        <li class="navbar-left__menu-item-divider ">Extras</li>
-        <li class="navbar-left__menu-item ">
-          <a href="# " class="navbar-left__menu-link ">
-            <i class="fa fa-glass "></i>
-            <span class="navbar-left__menu-link-text ">Pages</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <div class="navbar-left__menu " data-simplebar>
+        <ul>
+          <li class="navbar-left__menu-item ">
+            <a href="index.html " class="navbar-left__menu-link ">
+              <i class="fa fa-dashboard "></i>
+              <span class="navbar-left__menu-link-text ">Dashboard</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item-divider ">UI Elements</li>
+          <li class="navbar-left__menu-item --has-dropdown ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-laptop "></i>
+              <span class="navbar-left__menu-link-text ">Components</span>
+            </a>
+            <ul class="sub-menu ">
+              <li class="navbar-left__menu-item ">
+                <a href="button.html " class="navbar-left__menu-link ">
+                  <i class="fa fa-puzzle-piece "></i>
+                  <span class="navbar-left__menu-link-text ">Buttons</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item \">
+                <a href="dropdown.html " class="navbar-left__menu-link ">
+                  <i class="fa fa-caret-down "></i>
+                  <span class="navbar-left__menu-link-text ">Dropdowns</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="badges.html " class="navbar-left__menu-link ">
+                  <i class="fa fa-id-badge "></i>
+                  <span class="navbar-left__menu-link-text ">Badges</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-bars "></i>
+                  <span class="navbar-left__menu-link-text ">Tabs</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-share-square-o "></i>
+                  <span class="navbar-left__menu-link-text ">Social Buttons</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="cards.html " class="navbar-left__menu-link ">
+                  <i class="fa fa-id-card-o "></i>
+                  <span class="navbar-left__menu-link-text ">Cards</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="alert.html " class="navbar-left__menu-link ">
+                  <i class="fa fa-exclamation-triangle "></i>
+                  <span class="navbar-left__menu-link-text ">Alerts</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-spinner "></i>
+                  <span class="navbar-left__menu-link-text ">Progress Bars</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="modals.html " class="navbar-left__menu-link ">
+                  <i class="fa fa-fire "></i>
+                  <span class="navbar-left__menu-link-text ">Modals</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="switches.html " class="navbar-left__menu-link ">
+                  <i class="fa fa-book "></i>
+                  <span class="navbar-left__menu-link-text ">Switches</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-th "></i>
+                  <span class="navbar-left__menu-link-text ">Grids</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-file-word-o "></i>
+                  <span class="navbar-left__menu-link-text ">Typography</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar-left__menu-item --has-dropdown ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-table "></i>
+              <span class="navbar-left__menu-link-text ">Tables</span>
+            </a>
+            <ul class="sub-menu ">
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-table "></i>
+                  <span class="navbar-left__menu-link-text ">Basic Table</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-table "></i>
+                  <span class="navbar-left__menu-link-text ">Data Table</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar-left__menu-item --has-dropdown ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-th "></i>
+              <span class="navbar-left__menu-link-text ">Forms</span>
+            </a>
+            <ul class="sub-menu ">
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-th "></i>
+                  <span class="navbar-left__menu-link-text ">Basic Forms</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-th "></i>
+                  <span class="navbar-left__menu-link-text ">Advanced Forms</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar-left__menu-item-divider ">Icons</li>
+          <li class="navbar-left__menu-item --has-dropdown ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-tasks "></i>
+              <span class="navbar-left__menu-link-text ">Icons</span>
+            </a>
+            <ul class="sub-menu ">
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-fort-awesome "></i>
+                  <span class="navbar-left__menu-link-text ">Font Awesome</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-envelope "></i>
+              <span class="navbar-left__menu-link-text ">Widget</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item --has-dropdown ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-bar-chart "></i>
+              <span class="navbar-left__menu-link-text ">Charts</span>
+            </a>
+            <ul class="sub-menu ">
+              <li class="navbar-left__menu-item ">
+                <a href="# " class="navbar-left__menu-link ">
+                  <i class="fa fa-line-chart "></i>
+                  <span class="navbar-left__menu-link-text ">Chart js</span>
+                </a>
+              </li>
+              <li class="navbar-left__menu-item "><a href="# " class="navbar-left__menu-link "><i class="fa fa-area-chart "></i><span class="navbar-left__menu-link-text ">Float Chart</span></a></li>
+              <li class="navbar-left__menu-item "><a href="# " class="navbar-left__menu-link "><i class="fa fa-pie-chart "></i><span class="navbar-left__menu-link-text ">Peity Chart</span></a></li>
+            </ul>
+          </li>
+          <li class="navbar-left__menu-item --has-dropdown ">
+            <a href="# " class="navbar-left__menu-link "><i class="fa fa-area-chart "></i><span class="navbar-left__menu-link-text ">Maps</span></a>
+            <ul class="sub-menu ">
+              <li class="navbar-left__menu-item "><a href="# " class="navbar-left__menu-link "><i class="fa fa-map-o "></i><span class="navbar-left__menu-link-text ">Google Maps</span></a></li>
+              <li class="navbar-left__menu-item "><a href="# " class="navbar-left__menu-link "><i class="fa fa-street-view "></i><span class="navbar-left__menu-link-text ">Vector Maps</span></a></li>
+            </ul>
+          </li>
+          <li class="navbar-left__menu-item-divider ">Extras</li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-glass "></i>
+              <span class="navbar-left__menu-link-text ">Pages</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-dashboard "></i>
+              <span class="navbar-left__menu-link-text ">Dashboard</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item-divider ">UI Elements</li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-laptop "></i>
+              <span class="navbar-left__menu-link-text ">Components</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-table "></i>
+              <span class="navbar-left__menu-link-text ">Tables</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-th "></i>
+              <span class="navbar-left__menu-link-text ">Forms</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item-divider ">Icons</li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-tasks "></i>
+              <span class="navbar-left__menu-link-text ">Icons</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-envelope "></i>
+              <span class="navbar-left__menu-link-text ">Widget</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-bar-chart "></i>
+              <span class="navbar-left__menu-link-text ">Charts</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-area-chart "></i>
+              <span class="navbar-left__menu-link-text ">Maps</span>
+            </a>
+          </li>
+          <li class="navbar-left__menu-item-divider ">Extras</li>
+          <li class="navbar-left__menu-item ">
+            <a href="# " class="navbar-left__menu-link ">
+              <i class="fa fa-glass "></i>
+              <span class="navbar-left__menu-link-text ">Pages</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar ends here -->
 
   <h1 class="text-right">Alerts</h1>
 <h4>Alert with paragrph and some dummy text.</h4>
-
 <pre><code class="language-markup">&lt;div class="alert alert--primary">
-  &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident &lt;strong>inventore&lt;/strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
-&lt;/div>
+    &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident &lt;strong>inventore&lt;/strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
+  &lt;/div>
 </code></pre>
+<div class="alert alert--primary">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--success">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--info">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--warning">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--danger">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<h4>Alert with heading.</h4>
+<div class="alert alert--primary">
+  <h5>Alert Primary</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--success">
+  <h5>Alert Success</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--info">
+  <h5>Alert Info</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--warning">
+  <h5>Alert Warning</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--danger">
+  <h5>Alert Danger</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
 
-  <div class="alert alert--primary">
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--success">
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--info">
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--warning">
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--danger">
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <h4>Alert with heading.</h4>
-  <div class="alert alert--primary">
-    <h5>Alert Primary</h5>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--success">
-    <h5>Alert Success</h5>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--info">
-    <h5>Alert Info</h5>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--warning">
-    <h5>Alert Warning</h5>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--danger">
-    <h5>Alert Danger</h5>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-  
-  <h4>Alert with close button.</h4>
+<h4>Alert with close button.</h4>
 <pre><code class="language-markup">&lt;div class="alert alert--danger alert--dismissible">
-  &lt;button class="alert-close">&times;&lt;/button>
-  &lt;h5>Alert Danger&lt;/h5>
-  &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
-&lt;/div>
+    &lt;button class="alert-close">&times;&lt;/button>
+    &lt;h5>Alert Danger&lt;/h5>
+    &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
+  &lt;/div>
 </code></pre>
-  <div class="alert alert--danger alert--dismissible">
-    <button class="alert-close">&times;</button>
-    <h5>Alert Danger</h5>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--secondary alert--dismissible">
-    <button class="alert-close">&times;</button>
-    <h5>Alert secondary</h5>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--info alert--dismissible">
-    <button class="alert-close">&times;</button>
-    <h5>Alert info</h5>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <h4>Alert with heading.</h4>
+<div class="alert alert--danger alert--dismissible">
+  <button class="alert-close">&times;</button>
+  <h5>Alert Danger</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--secondary alert--dismissible">
+  <button class="alert-close">&times;</button>
+  <h5>Alert secondary</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--info alert--dismissible">
+  <button class="alert-close">&times;</button>
+  <h5>Alert info</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident inventore commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<h4>Alert with heading.</h4>
 <pre><code class="language-markup">&lt;div class="alert alert--primary alert--dismissible">
-  &lt;button class="alert-close">&times;&lt;/button>
-  &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident &lt;strong>inventore&lt;/strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
-&lt;/div>
+    &lt;button class="alert-close">&times;&lt;/button>
+    &lt;p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident &lt;strong>inventore&lt;/strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.&lt;/p>
+  &lt;/div>
 </code></pre>
-  <div class="alert alert--primary alert--dismissible">
-    <button class="alert-close">&times;</button>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--success alert--dismissible">
-    <button class="alert-close">&times;</button>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--info alert--dismissible">
-    <button class="alert-close">&times;</button>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
-
-  <div class="alert alert--warning alert--dismissible">
-    <button class="alert-close">&times;</button>
-    <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
-  </div>
+<div class="alert alert--primary alert--dismissible">
+  <button class="alert-close">&times;</button>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--success alert--dismissible">
+  <button class="alert-close">&times;</button>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--info alert--dismissible">
+  <button class="alert-close">&times;</button>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
+<div class="alert alert--warning alert--dismissible">
+  <button class="alert-close">&times;</button>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugit quos facere provident <strong>inventore</strong> commodi eum iusto rerum assumenda et, excepturi est quis, sapiente ipsam repudiandae fugiat neque ullam! Fugiat.</p>
+</div>
 
 
   </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
-<!-- custom scrollbar js cdn -->
-<script src="https://rawgit.com/utatti/perfect-scrollbar/master/dist/perfect-scrollbar.js"></script>
-<!-- admin the js -->
-<script type="text/javascript" src="js/main.min.js"></script>
-</body>
+  <!-- footer starts here -->
+<footer class="footer footer--main">
+  <p class="text-center text-small">© 2018 Ajay Rawat</p>
+</footer>
+<!-- footer ends here -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+  <!-- custom scrollbar js cdn -->
+  <script src="https://rawgit.com/utatti/perfect-scrollbar/master/dist/perfect-scrollbar.js"></script>
+  <!-- admin the js -->
+  <script type="text/javascript" src="js/main.min.js"></script>
+  </body>
 </html>

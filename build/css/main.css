@@ -556,6 +556,10 @@ fieldset {
       touch-action: manipulation;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   padding-top: 5rem;
 }
@@ -564,6 +568,7 @@ body {
   padding: 3rem;
   padding-left: 8.5rem;
   border: 1px solid red;
+  min-height: 100%;
 }
 
 @media (max-width: 992px) {
@@ -1953,6 +1958,37 @@ pre[class*="language-"] {
   transition: all .3s ease;
 }
 
+.checkbox-swicth {
+  position: relative;
+  width: 5rem;
+  height: 2.2rem;
+  border: 1px solid red;
+}
+
+.checkbox-swicth input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.checkbox-swicth label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid red;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.footer--main {
+  padding: 15px;
+  color: #fff;
+  background: #414550;
+}
+
 .text-primary {
   color: #1991eb;
 }
@@ -1975,6 +2011,30 @@ pre[class*="language-"] {
 
 .text-right {
   text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-small {
+  font-size: 75%;
+}
+
+.text-normal {
+  font-size: 100%;
+}
+
+.text-large {
+  font-size: 125%;
 }
 
 .sr-only {

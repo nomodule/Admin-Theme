@@ -1,15 +1,22 @@
+// #Color
+
 
 .text-primary { color: $primary; }
-
 .text-success { color: $success; }
-
 .text-warning { color: $warning; }
-
 .text-info { color: $info; }
-
 .text-danger { color: $danger; }
 
 
 // #Align
 
 .text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+// #Size
+
+.text-small { font-size: 75%; }
+.text-normal { font-size: 100%; }
+.text-large { font-size: 125%; }

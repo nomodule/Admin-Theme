@@ -1,0 +1,11 @@
+<!-- <div class="checkbox-swicth">
+  <input type="checkbox" class="js-checkbox-swicth" id="switcher-1">
+  <label class="" for="switcher-1" ></label>
+</div> -->
+
+<input type="checkbox" class="js-checkbox-swicth">
+<input type="checkbox" class="js-checkbox-swicth">
+<input type="checkbox" class="js-checkbox-swicth">
+<input type="checkbox" class="js-checkbox-swicth">
+
+<!-- <button id="btn">random log</button> -->
