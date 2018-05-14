@@ -1,24 +1,60 @@
-.checkbox-swicth {
+.switch {
+  // variables
+  $switch-size: 4em;
 
   & {
     position: relative;
-    width: 5rem;
-    height: 2.2rem;
-    border: 1px solid red;
+    display: inline-block;
+    width: $switch-size;
+    height: ($switch-size / 2) + .2;
+    font-size: 1rem;
+  }
 
-    input[type="checkbox"] {
-      appearance: none;
-    }
+  &--small {
+    font-size: .8rem;
+  }
 
-    label {
+  &--large {
+    font-size: 1.5rem;
+  }
+
+  &-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+    border-radius: $switch-size / 2;
+    cursor: pointer;
+
+    &::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
-      display: block;
-      width: 2.2rem;
-      height: 2.2rem;
-      border: 1px solid red;
+      width: ($switch-size / 2) + .2;
+      height: ($switch-size / 2) + .2;
+      background: darken(lightgray, 10%);
       border-radius: 50%;
+      transform: scale(1.1);
+      box-shadow: 1px 1px 2px rgba($black, .5);
     }
+  }
+
+  &-checkbox {
+    display: none;
+  }
+
+  &-checkbox:checked + &-label::before {
+    right: 0;
+    left: unset;
+    background: $white;
+  }
+
+  &-checkbox:checked + &-label {
+    background: $success;
   }
 }

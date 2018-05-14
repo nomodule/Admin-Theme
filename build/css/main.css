@@ -1958,29 +1958,67 @@ pre[class*="language-"] {
   transition: all .3s ease;
 }
 
-.checkbox-swicth {
+.switch {
   position: relative;
-  width: 5rem;
-  height: 2.2rem;
-  border: 1px solid red;
+  display: inline-block;
+  width: 4em;
+  height: 2.2em;
+  font-size: 1rem;
 }
 
-.checkbox-swicth input[type="checkbox"] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+.switch--small {
+  font-size: .8rem;
 }
 
-.checkbox-swicth label {
+.switch--large {
+  font-size: 1.5rem;
+}
+
+.switch-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: lightgray;
+  -webkit-border-radius: 2em;
+          border-radius: 2em;
+  cursor: pointer;
+}
+
+.switch-label::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
-  width: 2.2rem;
-  height: 2.2rem;
-  border: 1px solid red;
+  width: 2.2em;
+  height: 2.2em;
+  background: #bababa;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+       -o-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.switch-checkbox {
+  display: none;
+}
+
+.switch-checkbox:checked + .switch-label::before {
+  right: 0;
+  left: unset;
+  background: #fff;
+}
+
+.switch-checkbox:checked + .switch-label {
+  background: #39b54a;
 }
 
 .footer--main {

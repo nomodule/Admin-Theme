@@ -250,42 +250,53 @@
       }
     }
 
-    
-
     attachEventOnArrayItems(cModalLaunchers, launchModal, 'click');
     attachEventOnArrayItems(cModalCloseButtons, hideModal, 'click');
 
     // #Switcher
-
+    // all input (checkboxes) with the class of `js-checkbox-swicth`
     var cCheckboxSwitcher = document.getElementsByClassName('js-checkbox-swicth');
-    var cCheckboxSwitcherHTML = document.createElement('div');
-    cCheckboxSwitcherHTML.classList.add('checkbox-swicth');
+
+    function removeSwitcherGarbage() {
+      for (var i = cCheckboxSwitcher.length - 1; i > -1; i--) {
+        cCheckboxSwitcher[i].outerHTML = "";
+      };
+    };
 
     // construct checkbox switcher html
-
-
-    // function switcher() {
-    //   for (var i = 0; i < cCheckboxSwitcher.length; i++) {
-    //     var cRandomId = '_' + Math.random().toString(36).substr(2, 9);
-    //     console.log(cRandomId);
-    //     cCheckboxSwitcherHTML.innerHTML = '<input type="checkbox" class="js-checkbox-swicth_" id="switcher' + cRandomId +'"> <label class="" for="switcher'+ cRandomId + '" ></label>';
-    //     cCheckboxSwitcher[i].parentNode.insertBefore(cCheckboxSwitcherHTML, cCheckboxSwitcher[i]);
-    //   }
-    // }
-
-    var myArr = ["one", "two", "three", "four", "five"];
-
     function switcher() {
       for (var i = 0; i < cCheckboxSwitcher.length; i++) {
-        var cRandomId = '_' + Math.random().toString(36).substr(2, 9);
-        cCheckboxSwitcherHTML.innerHTML = '<input type="checkbox" class="js-checkbox-swicth_" id="switcher' + cRandomId +'"> <label class="" for="switcher'+ cRandomId + '" ></label>';
-        cCheckboxSwitcher[i] = "string";
-        myArr[i] = "string";
-      }
+        // here we are generating random id to use in `for` and `id` attribute of `label` and `input` respectively
+        var cRandomId = Math.random().toString(36).substr(2, 9);
+        // create HTML structure and replace with `<input type="checkbox" class="js-checkbox-swicth">` elements in DOM
+        var cCheckboxSwitcherInnerElement = document.createElement('div');
+        cCheckboxSwitcherInnerElement.classList.add('switch');
 
-      console.log(cCheckboxSwitcher);
-      console.log(myArr);
-    }
+        if(cCheckboxSwitcher[i].classList.contains('switch--small')) {
+          cCheckboxSwitcherInnerElement.classList.add('switch--small');
+        }
+
+        if ((cCheckboxSwitcher[i].classList.contains('switch--large'))) {
+          cCheckboxSwitcherInnerElement.classList.add('switch--large');
+        }
+        
+        var cCheckboxSwitcherInnerHTML = "";
+        cCheckboxSwitcherInnerHTML += '<input type="checkbox" class="switch-checkbox" id="switcher-';
+        cCheckboxSwitcherInnerHTML += cRandomId;
+        cCheckboxSwitcherInnerHTML += '"';
+        // add `checked` attribute in input if is applied in HTML
+        if (cCheckboxSwitcher[i].checked) {
+          cCheckboxSwitcherInnerHTML += 'checked="checked"';
+        }
+        cCheckboxSwitcherInnerHTML += '> <label class="switch-label" for="switcher-';
+        cCheckboxSwitcherInnerHTML += cRandomId;
+        cCheckboxSwitcherInnerHTML += '" ></label>';
+        cCheckboxSwitcherInnerElement.innerHTML = cCheckboxSwitcherInnerHTML;
+        cCheckboxSwitcher[i].parentNode.insertBefore(cCheckboxSwitcherInnerElement, cCheckboxSwitcher[i]);
+      };
+
+      removeSwitcherGarbage();
+    };
 
     switcher();
 
