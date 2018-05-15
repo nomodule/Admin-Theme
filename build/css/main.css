@@ -2002,11 +2002,11 @@ pre[class*="language-"] {
   background: #bababa;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  -webkit-transform: scale(1.1);
-     -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-       -o-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.1) translateX(0);
+     -moz-transform: scale(1.1) translateX(0);
+      -ms-transform: scale(1.1) translateX(0);
+       -o-transform: scale(1.1) translateX(0);
+          transform: scale(1.1) translateX(0);
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   -webkit-transition: all .35s ease;
@@ -2020,11 +2020,11 @@ pre[class*="language-"] {
 }
 
 .switch-checkbox:checked + .switch-label::before {
-  -webkit-transform: translateX(100%);
-     -moz-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-       -o-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: scale(1.1) translateX(100%);
+     -moz-transform: scale(1.1) translateX(100%);
+      -ms-transform: scale(1.1) translateX(100%);
+       -o-transform: scale(1.1) translateX(100%);
+          transform: scale(1.1) translateX(100%);
   background: #fff;
 }
 
@@ -2036,6 +2036,31 @@ pre[class*="language-"] {
   padding: 15px;
   color: #fff;
   background: #414550;
+}
+
+.btn--facebook {
+  color: #fff;
+  background: #3b5998;
+}
+
+.btn--pinterest {
+  color: #fff;
+  background: #bd081c;
+}
+
+.btn--instagram {
+  color: #fff;
+  background: #e1306c;
+}
+
+.btn--twitter {
+  color: #fff;
+  background: #1da1f2;
+}
+
+.btn--linkedin {
+  color: #fff;
+  background: #0077b5;
 }
 
 .text-primary {

@@ -1,0 +1,11 @@
+$facebook-brand-color:   #3b5998 !default;
+$pinterest-brand-color: #bd081c !default;
+$instagram-brand-color: #e1306c !default;
+$twitter-brand-color: #1da1f2 !default;
+$linkedin-brand-color: #0077b5 !default;
+
+.btn--facebook    { color: $white; background: $facebook-brand-color; }
+.btn--pinterest   { color: $white; background: $pinterest-brand-color; }
+.btn--instagram   { color: $white; background: $instagram-brand-color; }
+.btn--twitter     { color: $white; background: $twitter-brand-color; }
+.btn--linkedin    { color: $white; background: $linkedin-brand-color; }
