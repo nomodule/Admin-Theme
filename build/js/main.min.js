@@ -219,7 +219,6 @@
       });
     }
 
-
     function hideModal() {
       if (modalState === 'active') {
         // set focus on the elemnt which has it before opeinig modal
@@ -257,6 +256,7 @@
     // all input (checkboxes) with the class of `js-checkbox-swicth`
     var cCheckboxSwitcher = document.getElementsByClassName('js-checkbox-swicth');
 
+    // remove inputs (checkboxed) from DOM
     function removeSwitcherGarbage() {
       for (var i = cCheckboxSwitcher.length - 1; i > -1; i--) {
         cCheckboxSwitcher[i].outerHTML = "";
