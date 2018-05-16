@@ -1,0 +1,69 @@
+<style type="text/css">
+  [class^='column'] {
+    font-size: 22px;
+    color:  white;
+    text-shadow: 1px 2px 3px rgba(0,0,0,.2);
+    border: 1px solid whitesmoke;
+    min-height: 100px;
+    background: lightblue;
+  }
+</style>
+<h1 class="text-right">Grids</h1>
+<h4>Available breakpoints</h4>
+<pre><code class="language-css">// Small (sm)
+@media (min-width: 567px) {};
+// Medium (md)
+@media (min-width: 768px) {};
+// Large (lg)
+@media (min-width: 992px) {};
+// Extra large (xl)
+@media (min-width: 1200px) {};
+</code></pre>
+<p>Theme is mobile first.. that's why we are using <code>min-width</code> media queries.</p>
+<div class="row">
+  <div class="column-sm-up-6">column-sm-up-6</div>
+  <div class="column-sm-up-6">column-sm-up-6</div>
+</div>
+
+<div class="spacerY-large"></div>
+
+<div class="row">
+  <div class="column-sm-up-4">column-sm-up-4</div>
+  <div class="column-sm-up-4">column-sm-up-4</div>
+  <div class="column-sm-up-4">column-sm-up-4</div>
+</div>
+
+<div class="spacerY-large"></div>
+
+<div class="row">
+  <div class="column-sm-up-5th">column-sm-up-5th</div>
+  <div class="column-sm-up-5th">column-sm-up-5th</div>
+  <div class="column-sm-up-5th">column-sm-up-5th</div>
+  <div class="column-sm-up-5th">column-sm-up-5th</div>
+  <div class="column-sm-up-5th">column-sm-up-5th</div>
+</div>
+
+<div class="spacerY-large"></div>
+
+<h4>Nested Columns</h4>
+
+<div class="row">
+  <div class="column-sm-up-6">column-sm-up-6
+    <div class="row">
+      <div class="column-sm-up-6">column-sm-up-6</div>
+      <div class="column-sm-up-6">column-sm-up-6</div>
+    </div>
+  </div>
+  <div class="column-sm-up-6">column-sm-up-6
+    <div class="row">
+      <div class="column-sm-up-6">column-sm-up-6</div>
+      <div class="column-sm-up-6">column-sm-up-6</div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column-sm-up-4">
+    column-sm-up-4
+  </div>
+</div>
