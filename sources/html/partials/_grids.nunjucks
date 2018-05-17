@@ -62,8 +62,56 @@
   </div>
 </div>
 
+<h4>In some situations we can also use <code>max-width</code> media queries.</h4>
+
+<pre><code class="language-css">// Small (sm)
+@media (max-width: 567px) {};
+// Medium (md)
+@media (max-width: 768px) {};
+// Large (lg)
+@media (max-width: 992px) {};
+// Extra large (xl)
+@media (max-width: 1200px) {};
+</code></pre>
+
 <div class="row">
-  <div class="column-sm-up-4">
-    column-sm-up-4
+  <div class="column-lg-up-6">column-lg-up-6</div>
+  <div class="column-lg-up-6">column-lg-up-6</div>
+</div>
+
+<div class="spacerY-large"></div>
+
+<div class="row">
+  <div class="column-lg-down-4">column-lg-down-4</div>
+  <div class="column-lg-down-4">column-lg-down-4</div>
+  <div class="column-lg-down-4">column-lg-down-4</div>
+</div>
+
+<div class="spacerY-large"></div>
+
+<div class="row">
+  <div class="column-lg-down-5th">column-lg-down-5th</div>
+  <div class="column-lg-down-5th">column-lg-down-5th</div>
+  <div class="column-lg-down-5th">column-lg-down-5th</div>
+  <div class="column-lg-down-5th">column-lg-down-5th</div>
+  <div class="column-lg-down-5th">column-lg-down-5th</div>
+</div>
+
+<div class="spacerY-large"></div>
+
+<h4>Nested Columns</h4>
+
+<div class="row">
+  <div class="column-lg-down-6">column-lg-down-6
+    <div class="row">
+      <div class="column-lg-down-6">column-lg-down-6</div>
+      <div class="column-lg-down-6">column-lg-down-6</div>
+    </div>
+  </div>
+  <div class="column-lg-down-6">column-lg-down-6
+    <div class="row">
+      <div class="column-lg-down-6">column-lg-down-6</div>
+      <div class="column-lg-down-6">column-lg-down-6</div>
+    </div>
   </div>
 </div>
