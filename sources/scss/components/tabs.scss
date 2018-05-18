@@ -1,0 +1,36 @@
+.tab {
+
+  & {
+    display: flex;
+    width: 100%;
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-tab {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: .5rem 2rem;
+  }
+
+  &-tab.active {
+    color: $white;
+    background: $primary;
+    border-radius: 3px;
+
+    &:hover, &:focus {
+      background: darken($primary, 10%);
+    }
+  }
+
+  &-tab.disabled {
+    color: map-get($theme-color, dark-400);
+  }
+
+  &-content {
+    display: none;
+  }
+}

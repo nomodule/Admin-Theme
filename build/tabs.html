@@ -292,122 +292,35 @@
     </nav>
     <!-- Navbar ends here -->
 
-  <style type="text/css">
-  [class^='column'] {
-    font-size: 22px;
-    color:  white;
-    text-shadow: 1px 2px 3px rgba(0,0,0,.2);
-    border: 1px solid whitesmoke;
-    min-height: 100px;
-    background: lightblue;
-  }
-</style>
-<h1 class="text-right">Grids</h1>
-<h4>Available breakpoints</h4>
-<pre><code class="language-css">// Small (sm)
-@media (min-width: 567px) {};
-// Medium (md)
-@media (min-width: 768px) {};
-// Large (lg)
-@media (min-width: 992px) {};
-// Extra large (xl)
-@media (min-width: 1200px) {};
-</code></pre>
-<p>Theme is mobile first.. that's why we are using <code>min-width</code> media queries.</p>
-<div class="row">
-  <div class="column-sm-up-6">column-sm-up-6</div>
-  <div class="column-sm-up-6">column-sm-up-6</div>
-</div>
-
-<div class="spacerY-large"></div>
+  <h1 class="text-right">Tabs</h1>
 
 <div class="row">
-  <div class="column-sm-up-4">column-sm-up-4</div>
-  <div class="column-sm-up-4">column-sm-up-4</div>
-  <div class="column-sm-up-4">column-sm-up-4</div>
-</div>
-
-<div class="spacerY-large"></div>
-
-<div class="row">
-  <div class="column-sm-up-5th">column-sm-up-5th</div>
-  <div class="column-sm-up-5th">column-sm-up-5th</div>
-  <div class="column-sm-up-5th">column-sm-up-5th</div>
-  <div class="column-sm-up-5th">column-sm-up-5th</div>
-  <div class="column-sm-up-5th">column-sm-up-5th</div>
-</div>
-
-<div class="spacerY-large"></div>
-
-<h4>Nested Columns</h4>
-
-<div class="row">
-  <div class="column-sm-up-6">column-sm-up-6
-    <div class="row">
-      <div class="column-sm-up-6">column-sm-up-6</div>
-      <div class="column-sm-up-6">column-sm-up-6</div>
-    </div>
-  </div>
-  <div class="column-sm-up-6">column-sm-up-6
-    <div class="row">
-      <div class="column-sm-up-6">column-sm-up-6</div>
-      <div class="column-sm-up-6">column-sm-up-6</div>
-    </div>
+  <div class="column-sm-up-8 column-md-up-6">
+    <ul class="tab">
+      <li class="tab-item">
+        <a href="#home" class="tab-tab active">Home</a>
+      </li>
+      <li class="tab-item">
+        <a href="#aboutus" class="tab-tab">About us</a>
+      </li>
+      <li class="tab-item">
+        <a href="#team" class="tab-tab">Team</a>
+      </li>
+      <li class="tab-item">
+        <a href="#contactus" class="tab-tab disabled">Contact us</a>
+      </li>
+    </ul>
   </div>
 </div>
 
-<h4>In some situations we can also use <code>max-width</code> media queries.</h4>
-
-<pre><code class="language-css">// Small (sm)
-@media (max-width: 567px) {};
-// Medium (md)
-@media (max-width: 768px) {};
-// Large (lg)
-@media (max-width: 992px) {};
-// Extra large (xl)
-@media (max-width: 1200px) {};
-</code></pre>
-
-<div class="row">
-  <div class="column-lg-up-6">column-lg-up-6</div>
-  <div class="column-lg-up-6">column-lg-up-6</div>
+<div class="tab-content" id="home">
+  <h4>home</h4>
 </div>
-
-<div class="spacerY-large"></div>
-
-<div class="row">
-  <div class="column-lg-down-4">column-lg-down-4</div>
-  <div class="column-lg-down-4">column-lg-down-4</div>
-  <div class="column-lg-down-4">column-lg-down-4</div>
+<div class="tab-content" id="aboutus">
+  <h4>aboutus</h4>
 </div>
-
-<div class="spacerY-large"></div>
-
-<div class="row">
-  <div class="column-lg-down-5th">column-lg-down-5th</div>
-  <div class="column-lg-down-5th">column-lg-down-5th</div>
-  <div class="column-lg-down-5th">column-lg-down-5th</div>
-  <div class="column-lg-down-5th">column-lg-down-5th</div>
-  <div class="column-lg-down-5th">column-lg-down-5th</div>
-</div>
-
-<div class="spacerY-large"></div>
-
-<h4>Nested Columns</h4>
-
-<div class="row">
-  <div class="column-lg-down-6">column-lg-down-6
-    <div class="row">
-      <div class="column-lg-down-6">column-lg-down-6</div>
-      <div class="column-lg-down-6">column-lg-down-6</div>
-    </div>
-  </div>
-  <div class="column-lg-down-6">column-lg-down-6
-    <div class="row">
-      <div class="column-lg-down-6">column-lg-down-6</div>
-      <div class="column-lg-down-6">column-lg-down-6</div>
-    </div>
-  </div>
+<div class="tab-content" id="team">
+  <h4>team</h4>
 </div>
 
 

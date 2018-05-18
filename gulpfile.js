@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 
 gulp.task('html', function(){
   gulp.src('build/*.html')
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('nunjucksRender', function(){

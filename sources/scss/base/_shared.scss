@@ -62,3 +62,12 @@ code {
   background: lightgrey;
   padding: .2rem 1rem;
 }
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: darken($primary, 10%);
+  }
+}
