@@ -211,6 +211,7 @@
     }
 
     &:hover, &:focus {
+      color: $white;
       background: $primary;
     }
   }

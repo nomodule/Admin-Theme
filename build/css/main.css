@@ -1278,6 +1278,7 @@ p {
 }
 
 .navbar-left__menu-link:hover, .navbar-left__menu-link:focus {
+  color: #fff;
   background: #1991eb;
 }
 
