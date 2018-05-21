@@ -2089,6 +2089,16 @@ pre[class*="language-"] {
 
 .tab-item {
   list-style: none;
+  border-top: 1px solid #cfd8dd;
+  border-left: 1px solid #cfd8dd;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.tab-item:last-child {
+  border-right: 1px solid #cfd8dd;
 }
 
 .tab-tab {

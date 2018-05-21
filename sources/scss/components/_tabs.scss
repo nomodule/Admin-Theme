@@ -7,6 +7,15 @@
 
   &-item {
     list-style: none;
+
+    border-top: 1px solid $dark-600;
+    border-left: 1px solid $dark-600;
+
+    &:last-child {
+      border-right: 1px solid $dark-600;
+    }
+
+    user-select: none;
   }
 
   &-tab {
