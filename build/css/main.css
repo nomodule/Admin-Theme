@@ -1311,6 +1311,7 @@ p {
   text-align: center;
   border: none;
   outline: 0;
+  white-space: nowrap;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2084,47 +2085,95 @@ pre[class*="language-"] {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   width: 100%;
 }
 
 .tab-item {
   list-style: none;
-  border-top: 1px solid #cfd8dd;
-  border-left: 1px solid #cfd8dd;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-.tab-item:last-child {
-  border-right: 1px solid #cfd8dd;
-}
-
-.tab-tab {
+.tab-btn {
   display: block;
   text-align: center;
   text-decoration: none;
   padding: .5rem 2rem;
+  white-space: nowrap;
 }
 
-.tab-tab.active {
+.tab-btn.active {
   color: #fff;
   background: #1991eb;
   -webkit-border-radius: 3px;
           border-radius: 3px;
 }
 
-.tab-tab.active:hover, .tab-tab.active:focus {
+.tab-btn.active:hover, .tab-btn.active:focus {
   background: #1175c0;
 }
 
-.tab-tab.disabled {
+.tab-btn.disabled {
   color: #828282;
+  cursor: default;
 }
 
 .tab-content {
   display: none;
+}
+
+.tab-content.show {
+  display: block;
+}
+
+/* Standard syntax */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 200ms linear;
+     -moz-animation: fadeIn 200ms linear;
+       -o-animation: fadeIn 200ms linear;
+          animation: fadeIn 200ms linear;
 }
 
 .text-primary {
@@ -2223,6 +2272,11 @@ pre[class*="language-"] {
 .spacerY-large {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.spacerY-medium {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .d-none {

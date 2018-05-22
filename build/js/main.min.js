@@ -302,15 +302,16 @@
 
     // #Tab
     // all clickable links
-    var cTabBtn = document.querySelectorAll('.tab-tab');
+    var cTabBtns = document.querySelectorAll('.js-tab');
     // tabs data
     var cTabContent = document.querySelectorAll('.tab-content');
 
-    function tabInitialize(e) {
+    function tabClickHandler(e) {
       // prevent id to be visible in url
       e.preventDefault();
-      for (let i = 0, length1 = cTabBtn.length; i < length1; i++){
-        cTabBtn[i].classList.remove('active');
+      console.log(cTabContent);
+      for (let i = 0, length1 = cTabBtns.length; i < length1; i++){
+        cTabBtns[i].classList.remove('active');
 
         // We are using try catch becaue might be user will forget to make
         // both tab links and tab data equaly
@@ -319,46 +320,44 @@
           if (this.getAttribute('href').slice(1) == cTabContent[i].id) {
             for(let i = 0, length1 = cTabContent.length; i < length1; i++){
 
-              cTabContent[i].style.display = 'none';
+              cTabContent[i].classList.remove('show');
             }
-            cTabContent[i].style.display = 'block';
+            cTabContent[i].classList.add('show');
           }
         } catch(e) { }
       }
 
       // add active class on clicked tab
       this.classList.add('active');
-
     }
     
     // 1.By default view firt tab
     // 2.Disable those tabs which has class of disabled.
     function tabsIntialTasks() {
-      for(let i = 0, length1 = cTabBtn.length; i < length1; i++){
+      for(let i = 0, length1 = cTabBtns.length; i < length1; i++){
         // 1
         if (i === 0) {
           console.log('i is zero')
-          cTabContent[0].style.display = 'block';
+          cTabContent[i].classList.add('show');
         }
         // 2
         // make unclickable those links which has disabled class
-        if (cTabBtn[i].classList.contains('disabled')) {
-          console.log(cTabBtn[i].classList.value);
+        if (cTabBtns[i].classList.contains('disabled')) {
+          console.log(cTabBtns[i].classList.value);
           // set disabled attribute dynamically
-          cTabBtn[i].setAttribute('disabled', 'disabled');
+          cTabBtns[i].setAttribute('disabled', 'disabled');
           // remove click event handler
-          cTabBtn[i].removeEventListener('click', tabInitialize);
+          cTabBtns[i].removeEventListener('click', tabClickHandler);
           // prevent id to be visible in url whwn tab is clicked
-          cTabBtn[i].style.pointerEvents = 'none';
-          cTabBtn[i].addEventListener('click', function(e){
+          cTabBtns[i].addEventListener('click', function(e){
             e.preventDefault();
           });
         }
       }
     }
 
-    attachEventOnArrayItems(cTabBtn, tabInitialize, 'mousedown');
-    // `tabsIntialTasks()` should be below `tabInitialize()` otherwise
+    attachEventOnArrayItems(cTabBtns, tabClickHandler, 'click');
+    // `tabsIntialTasks()` should be below `tabClickHandler()` otherwise
     // disabling tab links will not work.
     tabsIntialTasks();
 

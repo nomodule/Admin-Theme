@@ -2,30 +2,24 @@
 
   & {
     display: flex;
+    flex-flow: row wrap;
     width: 100%;
   }
 
   &-item {
     list-style: none;
-
-    border-top: 1px solid $dark-600;
-    border-left: 1px solid $dark-600;
-
-    &:last-child {
-      border-right: 1px solid $dark-600;
-    }
-
     user-select: none;
   }
 
-  &-tab {
+  &-btn {
     display: block;
     text-align: center;
     text-decoration: none;
     padding: .5rem 2rem;
+    white-space: nowrap;
   }
 
-  &-tab.active {
+  &-btn.active {
     color: $white;
     background: $primary;
     border-radius: 3px;
@@ -35,11 +29,29 @@
     }
   }
 
-  &-tab.disabled {
+  &-btn.disabled {
     color: map-get($theme-color, dark-400);
+    cursor: default;
   }
 
   &-content {
     display: none;
   }
+
+  &-content.show {
+    display: block;
+  }
+}
+
+/* Standard syntax */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+    animation: fadeIn 200ms linear;
 }
