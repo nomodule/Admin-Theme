@@ -2095,6 +2095,16 @@ pre[class*="language-"] {
   width: 100%;
 }
 
+.tab--vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .tab-item {
   list-style: none;
   -webkit-user-select: none;

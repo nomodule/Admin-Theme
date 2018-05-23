@@ -306,10 +306,11 @@
     // tabs data
     var cTabContent = document.querySelectorAll('.tab-content');
 
+    console.log(cTabContent);
+
     function tabClickHandler(e) {
       // prevent id to be visible in url
       e.preventDefault();
-      console.log(cTabContent);
       for (let i = 0, length1 = cTabBtns.length; i < length1; i++){
         cTabBtns[i].classList.remove('active');
 
@@ -337,7 +338,6 @@
       for(let i = 0, length1 = cTabBtns.length; i < length1; i++){
         // 1
         if (i === 0) {
-          console.log('i is zero')
           cTabContent[i].classList.add('show');
         }
         // 2

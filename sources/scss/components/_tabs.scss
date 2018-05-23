@@ -6,6 +6,10 @@
     width: 100%;
   }
 
+  &--vertical {
+    flex-direction: column;
+  }
+
   &-item {
     list-style: none;
     user-select: none;
