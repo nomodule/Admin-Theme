@@ -301,54 +301,52 @@
     switcher();
 
     // #Tab
-    // all clickable links
-    var cTabBtns = document.querySelectorAll('.js-tab');
-    // tabs data
+    var cTab = document.querySelectorAll('.tab');
+    var cTabBtns = document.querySelectorAll('.tab .js-tab');
     var cTabContent = document.querySelectorAll('.tab-content');
+    var cTabPane = document.querySelectorAll('.tab-content .tab-pane');
 
-    console.log(cTabContent);
-
-    function tabClickHandler(e) {
-      // prevent id to be visible in url
+    function tabBtnClickHandler(e) {
       e.preventDefault();
-      for (let i = 0, length1 = cTabBtns.length; i < length1; i++){
-        cTabBtns[i].classList.remove('active');
-
-        // We are using try catch becaue might be user will forget to make
-        // both tab links and tab data equaly
-        try {
-          // hide and show tab data when tab is clicked
-          if (this.getAttribute('href').slice(1) == cTabContent[i].id) {
-            for(let i = 0, length1 = cTabContent.length; i < length1; i++){
-
-              cTabContent[i].classList.remove('show');
-            }
-            cTabContent[i].classList.add('show');
-          }
-        } catch(e) { }
+      var bTabContent;
+      var bTabPanes;
+      var tabContentToShow;
+      // collect all of the buttons from the group of wehre clicked button belongs
+      // we are getting it by finding parent `tab` which is ul
+      // and then collecting each button within it
+      var bTabBtns = (this.parentNode.parentNode).querySelectorAll('.js-tab');
+      tabContentToShow = this.getAttribute('href').slice(1);
+      for (var i = 0; i < bTabBtns.length; i++) {
+        // remove `active` class from the group of clicked button's
+        bTabBtns[i].classList.remove('active');
+      }
+      bTabContent = document.getElementById(tabContentToShow).parentNode;
+      bTabPanes = bTabContent.querySelectorAll('.tab-pane');
+      for (var j = 0; j < bTabPanes.length; j++) {
+        bTabPanes[j].classList.remove('show');
       }
 
-      // add active class on clicked tab
+      // show tab pane 
+      document.getElementById(tabContentToShow).classList.add('show');
       this.classList.add('active');
     }
-    
-    // 1.By default view firt tab
-    // 2.Disable those tabs which has class of disabled.
-    function tabsIntialTasks() {
-      for(let i = 0, length1 = cTabBtns.length; i < length1; i++){
-        // 1
-        if (i === 0) {
-          cTabContent[i].classList.add('show');
-        }
-        // 2
-        // make unclickable those links which has disabled class
-        if (cTabBtns[i].classList.contains('disabled')) {
-          console.log(cTabBtns[i].classList.value);
-          // set disabled attribute dynamically
-          cTabBtns[i].setAttribute('disabled', 'disabled');
-          // remove click event handler
-          cTabBtns[i].removeEventListener('click', tabClickHandler);
-          // prevent id to be visible in url whwn tab is clicked
+
+    function tabInit() {
+
+      for (var i = 0; i < cTab.length; i++) {
+        var firstTabBtn = cTab[i].querySelector('.js-tab');
+        firstTabBtn.classList.remove('active');
+        firstTabBtn.classList.add('active');
+
+        var firstTabContent = cTabContent[i].querySelector('.tab-pane');
+        firstTabContent.classList.remove('show');
+        firstTabContent.classList.add('show');
+      }
+
+      for (var i = 0; i < cTabBtns.length; i++) {
+        if(cTabBtns[i].classList.contains('disabled')) {
+          cTabBtns[i].setAttribute('disabled', 'disabled')
+          cTabBtns[i].removeEventListener('click', tabBtnClickHandler);
           cTabBtns[i].addEventListener('click', function(e){
             e.preventDefault();
           });
@@ -356,9 +354,8 @@
       }
     }
 
-    attachEventOnArrayItems(cTabBtns, tabClickHandler, 'click');
-    // `tabsIntialTasks()` should be below `tabClickHandler()` otherwise
-    // disabling tab links will not work.
-    tabsIntialTasks();
+    attachEventOnArrayItems(cTabBtns, tabBtnClickHandler, 'click');
+    tabInit();
+
 
 }(window));

@@ -37,12 +37,12 @@
     color: map-get($theme-color, dark-400);
     cursor: default;
   }
-
-  &-content {
+  
+  &-pane {
     display: none;
   }
 
-  &-content.show {
+  &-pane.show {
     display: block;
   }
 }
