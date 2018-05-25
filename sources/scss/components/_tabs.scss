@@ -34,8 +34,13 @@
   }
 
   &-btn.disabled {
+    outline: 0;
     color: map-get($theme-color, dark-400);
     cursor: default;
+
+    &:hover, :focus {
+      outline: 0;
+    }
   }
   
   &-pane {

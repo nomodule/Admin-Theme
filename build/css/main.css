@@ -1044,6 +1044,10 @@ p {
 
 /* \.EXTRA LARGE COLUMNS */
 /************ TEST *************/
+.lead {
+  font-size: 150%;
+}
+
 .navbar-left {
   position: relative;
   width: 100%;
@@ -2133,8 +2137,13 @@ pre[class*="language-"] {
 }
 
 .tab-btn.disabled {
+  outline: 0;
   color: #828282;
   cursor: default;
+}
+
+.tab-btn.disabled:hover, .tab-btn.disabled :focus {
+  outline: 0;
 }
 
 .tab-pane {

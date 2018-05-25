@@ -303,7 +303,7 @@
             <a href="#home" class="tab-btn js-tab">Home</a>
           </li>
           <li class="tab-item">
-            <a href="#aboutus" class="tab-btn js-tab ">About us</a>
+            <a href="#aboutus" class="tab-btn js-tab disabled ">About us</a>
           </li>
           <li class="tab-item">
             <a href="#team" class="tab-btn js-tab ">Team</a>
@@ -333,44 +333,42 @@
 
 <div class="spacerY-large"></div>
 
-<!--
+
 <h5>Tabs HTML</h5>
 <p><strong>Note: </strong>Tabs and tabs data are linked through ID.</p>
-<pre><code class="language-markup">&lt;div class="row">
-  &lt;div class="column-sm-up-8 column-md-up-6">
-    &lt;ul class="tab">
-      &lt;li class="tab-item">
-        &lt;a href="#home" class="tab-btn js-tab active">Home&lt;/a>
-      &lt;/li>
-      &lt;li class="tab-item">
-        &lt;a href="#aboutus" class="tab-btn js-tab">About us&lt;/a>
-      &lt;/li>
-      &lt;li class="tab-item">
-        &lt;a href="#team" class="tab-btn js-tab">Team&lt;/a>
-      &lt;/li>
-      &lt;li class="tab-item">
-        &lt;a href="#contactus" class="tab-btn js-tab disabled">Contact us&lt;/a>
-      &lt;/li>
-    &lt;/ul>
+<pre><code class="language-markup">&lt;ul class="tab">
+  &lt;li class="tab-item">
+    &lt;a href="#home" class="tab-btn js-tab">Home&lt;/a>
+  &lt;/li>
+  &lt;li class="tab-item">
+    &lt;a href="#aboutus" class="tab-btn js-tab disabled ">About us&lt;/a>
+  &lt;/li>
+  &lt;li class="tab-item">
+    &lt;a href="#team" class="tab-btn js-tab ">Team&lt;/a>
+  &lt;/li>
+  &lt;li class="tab-item">
+    &lt;a href="#contactus" class="tab-btn js-tab disabled">Contact us&lt;/a>
+  &lt;/li>
+&lt;/ul>
+</code></pre>
+
+<h5>Content HTML</h5>
+<pre><code class="language-markup">&lt;div class="tab-content">
+  &lt;div class="tab-pane fadeIn" id="home">
+    &lt;h5>Home&lt;/h5>
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eius omnis eveniet porro quaerat veniam qui soluta quidem cumque. Ut voluptate eum quae consequuntur itaque cupiditate eos, quos facere vero. ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
+  &lt;/div>
+  &lt;div class="tab-pane fadeIn" id="aboutus">
+    &lt;h5>About us&lt;/h5>
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum odit esse rem quos nihil dignissimos ipsa ea labore ducimus, cupiditate, ratione minus dolor, voluptates ut temporibus corporis, commodi placeat expedita. ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
+  &lt;/div>
+  &lt;div class="tab-pane fadeIn" id="team">
+    &lt;h5>Team&lt;/h5>
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem vitae nihil eveniet, veniam in voluptate repudiandae veritatis perferendis incidunt saepe quidem, commodi atque odit eum omnis corporis rem officia. Asperiores. ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
   &lt;/div>
 &lt;/div>
 </code></pre>
 
-<h5>Content HTML</h5>
-<pre><code class="language-markup">&lt;div class="tab-content fadeIn" id="home">
-  &lt;h4>home&lt;/h4>
-  &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
-&lt;/div>
-&lt;div class="tab-content fadeIn" id="aboutus">
-  &lt;h4>aboutus&lt;/h4>
-  &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
-&lt;/div>
-&lt;div class="tab-content fadeIn" id="team">
-  &lt;h4>team&lt;/h4>
-  &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
-&lt;/div>
-</code></pre>
--->
 
 <div class="card">
   <div class="card-body">
@@ -410,6 +408,45 @@
     </div>
   </div>
 </div>
+
+<div class="spacerY-large"></div>
+
+<h5>Tabs HTML</h5>
+<p><strong>Note: </strong>Tabs and tabs data are linked through ID.</p>
+<pre><code class="language-markup">&lt;ul class="tab tab--vertical">
+  &lt;li class="tab-item">
+    &lt;a href="#home2" class="tab-btn js-tab active">Home&lt;/a>
+  &lt;/li>
+  &lt;li class="tab-item">
+    &lt;a href="#aboutus2" class="tab-btn js-tab ">About us&lt;/a>
+  &lt;/li>
+  &lt;li class="tab-item">
+    &lt;a href="#team2" class="tab-btn js-tab ">Team&lt;/a>
+  &lt;/li>
+  &lt;li class="tab-item">
+    &lt;a href="#contactus2" class="tab-btn js-tab disabled">Contact us&lt;/a>
+  &lt;/li>
+&lt;/ul>
+</code></pre>
+
+<h5>Content HTML</h5>
+<pre><code class="language-markup">&lt;div class="tab-content">
+  &lt;div class="tab-pane fadeIn" id="home2">
+    &lt;h5>Home&lt;/h5>
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eius omnis eveniet porro quaerat veniam qui soluta quidem cumque. Ut voluptate eum quae consequuntur itaque cupiditate eos, quos facere vero. ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
+  &lt;/div>
+  &lt;div class="tab-pane fadeIn" id="aboutus2">
+    &lt;h5>About us&lt;/h5>
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum odit esse rem quos nihil dignissimos ipsa ea labore ducimus, cupiditate, ratione minus dolor, voluptates ut temporibus corporis, commodi placeat expedita. ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
+  &lt;/div>
+  &lt;div class="tab-pane fadeIn" id="team2">
+    &lt;h5>Team&lt;/h5>
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem vitae nihil eveniet, veniam in voluptate repudiandae veritatis perferendis incidunt saepe quidem, commodi atque odit eum omnis corporis rem officia. Asperiores. ipsum dolor sit amet, consectetur adipisicing elit. Natus, laboriosam nemo voluptatem accusantium iusto consectetur nulla quisquam quam in reiciendis vitae quos dolores quae tenetur dolore. Voluptatibus velit sed consequuntur.&lt;/p>
+  &lt;/div>
+&lt;/div>
+</code></pre>
+
+
 
 
   </div>

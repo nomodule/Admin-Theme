@@ -345,7 +345,8 @@
 
       for (var i = 0; i < cTabBtns.length; i++) {
         if(cTabBtns[i].classList.contains('disabled')) {
-          cTabBtns[i].setAttribute('disabled', 'disabled')
+          cTabBtns[i].setAttribute('disabled', 'disabled');
+          cTabBtns[i].setAttribute('tabindex', '-1');
           cTabBtns[i].removeEventListener('click', tabBtnClickHandler);
           cTabBtns[i].addEventListener('click', function(e){
             e.preventDefault();
